@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "nativeLanguage": "en"
+    },
+    "jhipsterVersion": "4.13.3",
+    "baseName": "at_sol",
+    "clientFramework": "angular1",
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "applicationType": "monolith",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": true,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "skipServer": true
+  }
+}
