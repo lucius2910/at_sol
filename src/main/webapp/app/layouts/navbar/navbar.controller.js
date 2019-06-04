@@ -11,6 +11,37 @@
         var vm = this;
 
         vm.isNavbarCollapsed = true;
+
+        vm.lstMenu = [
+            {
+                id: 1,
+                link: 'devices',
+                text: 'Thiết bị',
+                icon: 'fa fa-server',
+                subItems:[]
+            },
+            {
+                id: 2,
+                link: 'device-group',
+                text: 'Nhóm thiết bị',
+                icon: 'fa fa-server',
+                subItems:[
+                    {
+                        id: 4,
+                        link: 'devices',
+                        text: 'Thiết bị 1',
+                        icon: 'fa fa-star'
+                    },
+                    {
+                        id: 5,
+                        link: 'devices',
+                        text: 'Thiết bị 2',
+                        icon: 'fa fa-star'
+                    }
+                ]
+            }
+        ]
+
         vm.isAuthenticated = Principal.isAuthenticated;
 
         ProfileService.getProfileInfo().then(function(response) {
