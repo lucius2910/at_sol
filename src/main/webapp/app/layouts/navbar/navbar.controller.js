@@ -77,9 +77,5 @@
         var my_awesome_script = document.createElement('script');
         my_awesome_script.setAttribute('src','./content/assets/demo/default/base/scripts.bundle.js');
         document.head.appendChild(my_awesome_script);
-
-        // var my_awesome_script_1 = document.createElement('script');
-        // my_awesome_script_1.setAttribute('src','./content/assets/app/bundle/app.bundle.js');
-        // document.head.appendChild(my_awesome_script_1);
     }
 })();

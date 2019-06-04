@@ -1,3 +1,5 @@
-*{
-    margin: 0;
-}
+.kt-portlet {
+    display: block;
+    -webkit-animation: kt-header-menu-submenu-fade-in 0.3s ease 1, kt-header-menu-submenu-move-down 0.3s ease-out 1;
+    animation: kt-header-menu-submenu-fade-in 0.3s ease 1, kt-header-menu-submenu-move-down 0.3s ease-out 1;
+    }

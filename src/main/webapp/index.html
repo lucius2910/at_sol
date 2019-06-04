@@ -22,6 +22,7 @@
     </script>
 
     <link href="./content/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
+    <link href="./content/assets/vendor/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
     <link href="./content/assets/vendor/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
     <link href="./content/assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
@@ -37,6 +38,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
     <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css">
+    <link rel="stylesheet" href="bower_components/bootstrap-select/dist/css/bootstrap-select.css">
     <!-- endinject -->
     <!-- <link rel="stylesheet" href="content/css/vendor.css"> -->
     <!-- endbuild -->
@@ -87,16 +89,7 @@
 
                 <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
                     <!-- begin:: Content -->
-                    <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-                        <div class="row">
-                            <div class="col-xl-12">
-                                <div class="kt-portlet kt-portlet--height-fluid">
-                                    <div class="kt-portlet__body" ui-view="content">
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content" ui-view="content">
                     </div>
                     <!-- end:: Content -->
                 </div>
@@ -157,6 +150,7 @@
     <script src="bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js"></script>
     <script src="bower_components/ng-file-upload/ng-file-upload.js"></script>
     <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+    <script src="bower_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
     <!-- endinject -->
     <!-- endbuild -->
 
@@ -207,6 +201,8 @@
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
     <script src="app/entities/entity.state.js"></script>
+    <script src="app/entities/devices/devices.state.js"></script>
+    <script src="app/entities/devices/devices.controller.js"></script>
     <script src="app/components/util/truncate-words.filter.js"></script>
     <script src="app/components/util/truncate-characters.filter.js"></script>
     <script src="app/components/util/sort-by.directive.js"></script>

@@ -1,3 +1,259 @@
-<div ng-cloak>
-    <a ui-sref="login">devices</a>
+<div class="row">
+    <div class="col-xl-12">
+        <div class="kt-portlet kt-portlet--mobile">
+            <div class="kt-portlet__head kt-portlet__head--lg">
+                <div class="kt-portlet__head-label">
+                    <span class="kt-portlet__head-icon">
+                        <i class="kt-font-brand flaticon2-line-chart"></i>
+                    </span>
+                    <h3 class="kt-portlet__head-title">
+                        Danh sách thiết bị
+                    </h3>
+                </div>
+                <div class="kt-portlet__head-toolbar">
+                    <div class="kt-portlet__head-wrapper">
+                        <a href="#" class="btn btn-clean btn-icon-sm">
+                            <i class="la la-long-arrow-left"></i>
+                            Back
+                        </a>
+                        &nbsp;
+                        <div class="dropdown dropdown-inline">
+                            <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="la la-plus"></i> Add New
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <ul class="kt-nav">
+                                    <li class="kt-nav__section kt-nav__section--first">
+                                        <span class="kt-nav__section-text">Choose an action:</span>
+                                    </li>
+                                    <li class="kt-nav__item">
+                                        <a href="#" class="kt-nav__link">
+                                            <i class="kt-nav__link-icon flaticon2-open-text-book"></i>
+                                            <span class="kt-nav__link-text">Reservations</span>
+                                        </a>
+                                    </li>
+                                    <li class="kt-nav__item">
+                                        <a href="#" class="kt-nav__link">
+                                            <i class="kt-nav__link-icon flaticon2-calendar-4"></i>
+                                            <span class="kt-nav__link-text">Appointments</span>
+                                        </a>
+                                    </li>
+                                    <li class="kt-nav__item">
+                                        <a href="#" class="kt-nav__link">
+                                            <i class="kt-nav__link-icon flaticon2-bell-alarm-symbol"></i>
+                                            <span class="kt-nav__link-text">Reminders</span>
+                                        </a>
+                                    </li>
+                                    <li class="kt-nav__item">
+                                        <a href="#" class="kt-nav__link">
+                                            <i class="kt-nav__link-icon flaticon2-contract"></i>
+                                            <span class="kt-nav__link-text">Announcements</span>
+                                        </a>
+                                    </li>
+                                    <li class="kt-nav__item">
+                                        <a href="#" class="kt-nav__link">
+                                            <i class="kt-nav__link-icon flaticon2-shopping-cart-1"></i>
+                                            <span class="kt-nav__link-text">Orders</span>
+                                        </a>
+                                    </li>
+                                    <li class="kt-nav__separator kt-nav__separator--fit">
+                                    </li>
+                                    <li class="kt-nav__item">
+                                        <a href="#" class="kt-nav__link">
+                                            <i class="kt-nav__link-icon flaticon2-rocket-1"></i>
+                                            <span class="kt-nav__link-text">Projects</span>
+                                        </a>
+                                    </li>
+                                    <li class="kt-nav__item">
+                                        <a href="#" class="kt-nav__link">
+                                            <i class="kt-nav__link-icon flaticon2-chat-1"></i>
+                                            <span class="kt-nav__link-text">User Feedbacks</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kt-portlet__body">
+
+                <!--begin: Search Form -->
+                <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 order-2 order-xl-1">
+                            <div class="row align-items-center">
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-input-icon kt-input-icon--left">
+                                        <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                                        <span class="kt-input-icon__icon kt-input-icon__icon--left">
+                                            <span><i class="la la-search"></i></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label">
+                                            <label>Status:</label>
+                                        </div>
+                                        <div class="kt-form__control">
+                                            <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.status">
+                                                <option value="{{item.value}}" ng-repeat="item in vm.lstStatus">{{item.title}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label">
+                                            <label>Type:</label>
+                                        </div>
+                                        <div class="kt-form__control">
+                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.type">
+                                                <option value="{{item.value}}" ng-repeat="item in vm.lstType">{{item.title}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="la la-search"></i> 
+                                            Search
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--end: Search Form -->
+            </div>
+            <div class="kt-portlet__body kt-portlet__body--fit">
+
+                <!--begin: Datatable -->
+                <div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data" >
+                    <table class="kt-datatable__table" style="display: block; min-height: 300px;">
+                        <thead class="kt-datatable__head">
+                            <tr class="kt-datatable__row" style="left: 0px;">
+                                <th data-field="RecordID" class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check">
+                                    <span style="width: 20px;">
+                                        <label class="kt-checkbox kt-checkbox--single kt-checkbox--all kt-checkbox--solid">
+                                            <input type="checkbox" ng-model="vm.checkedAllItem" ng-change="vm.changeCheckAllItem()">&nbsp;<span></span>
+                                        </label>
+                                    </span>
+                                </th>
+                                <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort"><span
+                                        style="width: 182px;">Order ID</span></th>
+                                <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort"><span
+                                        style="width: 182px;">Country</span></th>
+                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort"><span
+                                        style="width: 182px;">Ship Date</span></th>
+                                <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort"><span
+                                        style="width: 182px;">Company Name</span></th>
+                                <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort"><span
+                                        style="width: 182px;">Status</span></th>
+                                <th data-field="Type" data-autohide-disabled="false"
+                                    class="kt-datatable__cell kt-datatable__cell--sort kt-datatable__cell--sorted" data-sort="asc"><span
+                                        style="width: 182px;">Type<i class="flaticon2-arrow-up"></i></span></th>
+                                <th data-field="Actions" data-autohide-disabled="false"
+                                    class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 110px;">Actions</span></th>
+                            </tr>
+                        </thead>
+                        <tbody class="kt-datatable__body" style="">
+                            <tr class="kt-datatable__row kt-datatable__row--hover" style="left: 0px;" ng-repeat="item in vm.lstData">
+                                <td class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check">
+                                    <span style="width: 20px;">
+                                        <label class="kt-checkbox kt-checkbox--single kt-checkbox--solid">
+                                            <input type="checkbox" ng-model="item.checked" ng-change="vm.changeCheckedItem()">&nbsp;
+                                            <span></span>
+                                        </label>
+                                    </span>
+                                </td>
+                                <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 182px;">{{item.id}}</span></td>
+                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.country}}</span></td>
+                                <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.shipDate}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.companyName}}</span></td>
+                                <td data-field="Status" class="kt-datatable__cell">
+                                    <span style="width: 182px;">
+                                        <span class="kt-badge  kt-badge--info kt-badge--inline kt-badge--pill">Info</span>
+                                    </span>
+                                </td>
+                                <td class="kt-datatable__cell--sorted kt-datatable__cell" data-field="Type"
+                                    data-autohide-disabled="false"><span style="width: 182px;"><span
+                                            class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span
+                                            class="kt-font-bold kt-font-danger">Online</span></span></td>
+                                <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell"><span
+                                        style="overflow: visible; position: relative; width: 110px;">
+                                        <div class="dropdown"> <a data-toggle="dropdown"
+                                                class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i class="la la-cog"></i> </a>
+                                            <div class="dropdown-menu dropdown-menu-right"> <a href="#" class="dropdown-item"><i
+                                                        class="la la-edit"></i> Edit Details</a> <a href="#" class="dropdown-item"><i
+                                                        class="la la-leaf"></i> Update Status</a> <a href="#" class="dropdown-item"><i
+                                                        class="la la-print"></i> Generate Report</a> </div>
+                                        </div> <a title="Edit details" class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
+                                                class="la la-edit"></i> </a> <a title="Delete"
+                                            class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i class="la la-trash"></i> </a>
+                                    </span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="kt-datatable__pager kt-datatable--paging-loaded">
+                        <ul class="kt-datatable__pager-nav">
+                            <li><a title="First"
+                                    class="kt-datatable__pager-link kt-datatable__pager-link--first kt-datatable__pager-link--disabled"
+                                    data-page="1" disabled="disabled"><i class="flaticon2-fast-back"></i></a></li>
+                            <li><a title="Previous"
+                                    class="kt-datatable__pager-link kt-datatable__pager-link--prev kt-datatable__pager-link--disabled"
+                                    data-page="1" disabled="disabled"><i class="flaticon2-back"></i></a></li>
+                            <li style="display: none;"><a title="More pages"
+                                    class="kt-datatable__pager-link kt-datatable__pager-link--more-prev" data-page="1"><i
+                                        class="flaticon-more-1"></i></a></li>
+                            <li style="display: none;"><input type="text" class="kt-pager-input form-control" title="Page number"></li>
+                            <li><a class="kt-datatable__pager-link kt-datatable__pager-link-number kt-datatable__pager-link--active"
+                                    data-page="1" title="1">1</a></li>
+                            <li><a class="kt-datatable__pager-link kt-datatable__pager-link-number" data-page="2" title="2">2</a></li>
+                            <li><a class="kt-datatable__pager-link kt-datatable__pager-link-number" data-page="3" title="3">3</a></li>
+                            <li><a class="kt-datatable__pager-link kt-datatable__pager-link-number" data-page="4" title="4">4</a></li>
+                            <li><a class="kt-datatable__pager-link kt-datatable__pager-link-number" data-page="5" title="5">5</a></li>
+                            <li><a title="More pages" class="kt-datatable__pager-link kt-datatable__pager-link--more-next"
+                                    data-page="6"><i class="flaticon-more-1"></i></a></li>
+                            <li><a title="Next" class="kt-datatable__pager-link kt-datatable__pager-link--next" data-page="2"><i
+                                        class="flaticon2-next"></i></a></li>
+                            <li><a title="Last" class="kt-datatable__pager-link kt-datatable__pager-link--last" data-page="10"><i
+                                        class="flaticon2-fast-next"></i></a></li>
+                        </ul>
+                        <div class="kt-datatable__pager-info">
+                            <div class="dropdown bootstrap-select kt-datatable__pager-size" style="width: 60px;"><select
+                                    class="selectpicker kt-datatable__pager-size" title="Select page size" data-width="60px"
+                                    data-selected="10" tabindex="-98">
+                                    <option class="bs-title-option" value=""></option>
+                                    <option value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                </select><button type="button" class="btn dropdown-toggle btn-light" data-toggle="dropdown"
+                                    role="button" title="Select page size">
+                                    <div class="filter-option">
+                                        <div class="filter-option-inner">
+                                            <div class="filter-option-inner-inner">10</div>
+                                        </div>
+                                    </div>
+                                </button>
+                                <div class="dropdown-menu " role="combobox">
+                                    <div class="inner show" role="listbox" aria-expanded="false" tabindex="-1">
+                                        <ul class="dropdown-menu inner show"></ul>
+                                    </div>
+                                </div>
+                            </div><span class="kt-datatable__pager-detail">Showing 1 - 10 of 100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!--end: Datatable -->
+            </div>
+        </div>
+    </div>
 </div>

@@ -24745,11 +24745,11 @@ strong {
   .bootstrap-select > .dropdown-toggle:focus {
     outline: none !important; }
   .bootstrap-select > .dropdown-toggle:after {
-    border: 0;
-    margin-right: -2px;
+    /* border: 0; */
+    /* margin-right: -2px;
     font-size: 0.6rem;
     display: inline-block;
-    font-family: Flaticon2;
+    font-family: "Font Awesome 5 Free";
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -24759,8 +24759,7 @@ strong {
     text-transform: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    font-smoothing: antialiased;
-    content: ""; }
+    content: "\f078";  */}
   .bootstrap-select > .dropdown-toggle:before {
     width: auto; }
 
