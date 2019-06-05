@@ -5,9 +5,9 @@
         .module('atSolApp')
         .controller('DevicesController', DevicesController);
 
-    DevicesController.$inject = ['$scope', 'Principal', 'LoginService', '$state'];
+    DevicesController.$inject = ['$scope', '$uibModal', '$state'];
 
-    function DevicesController ($scope, Principal, LoginService, $state) {
+    function DevicesController ($scope, $uibModal, $state) {
         var vm = this;
 
         vm.status = '1';
@@ -20,6 +20,7 @@
 
         vm.changeCheckAllItem = changeCheckAllItem;
         vm.changeCheckedItem = changeCheckedItem;
+        vm.editItem = editItem;
 
         vm.lstType = [
             {
@@ -137,6 +138,21 @@
                 type: 2
             }
         ];
+
+        function editItem(item){
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'app/entities/devices/devices.edit.html',
+                controller: 'DeviceEditController',
+                controllerAs: 'vm',
+                size: 'lg',
+                resolve: {
+                  dataItem: function () {
+                    return item;
+                  }
+                }
+            });
+        }
 
         function changeCheckAllItem(){
             angular.forEach(vm.lstData, function(element){

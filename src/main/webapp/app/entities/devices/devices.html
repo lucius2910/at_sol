@@ -18,60 +18,9 @@
                         </a>
                         &nbsp;
                         <div class="dropdown dropdown-inline">
-                            <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn btn-brand btn-icon-sm">
                                 <i class="la la-plus"></i> Add New
                             </button>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <ul class="kt-nav">
-                                    <li class="kt-nav__section kt-nav__section--first">
-                                        <span class="kt-nav__section-text">Choose an action:</span>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link">
-                                            <i class="kt-nav__link-icon flaticon2-open-text-book"></i>
-                                            <span class="kt-nav__link-text">Reservations</span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link">
-                                            <i class="kt-nav__link-icon flaticon2-calendar-4"></i>
-                                            <span class="kt-nav__link-text">Appointments</span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link">
-                                            <i class="kt-nav__link-icon flaticon2-bell-alarm-symbol"></i>
-                                            <span class="kt-nav__link-text">Reminders</span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link">
-                                            <i class="kt-nav__link-icon flaticon2-contract"></i>
-                                            <span class="kt-nav__link-text">Announcements</span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link">
-                                            <i class="kt-nav__link-icon flaticon2-shopping-cart-1"></i>
-                                            <span class="kt-nav__link-text">Orders</span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__separator kt-nav__separator--fit">
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link">
-                                            <i class="kt-nav__link-icon flaticon2-rocket-1"></i>
-                                            <span class="kt-nav__link-text">Projects</span>
-                                        </a>
-                                    </li>
-                                    <li class="kt-nav__item">
-                                        <a href="#" class="kt-nav__link">
-                                            <i class="kt-nav__link-icon flaticon2-chat-1"></i>
-                                            <span class="kt-nav__link-text">User Feedbacks</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -130,9 +79,11 @@
 
                 <!--end: Search Form -->
             </div>
-            <div class="kt-portlet__body kt-portlet__body--fit">
 
-                <!--begin: Datatable -->
+            <!-- ----------------------------------------------------------------------------------------- -->
+            <!--begin: Datatable -->
+            <!-- ----------------------------------------------------------------------------------------- -->
+            <div class="kt-portlet__body kt-portlet__body--fit">
                 <div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data" >
                     <table class="kt-datatable__table" style="display: block; min-height: 300px;">
                         <thead class="kt-datatable__head">
@@ -144,24 +95,31 @@
                                         </label>
                                     </span>
                                 </th>
-                                <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort"><span
-                                        style="width: 182px;">Order ID</span></th>
-                                <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort"><span
-                                        style="width: 182px;">Country</span></th>
-                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort"><span
-                                        style="width: 182px;">Ship Date</span></th>
-                                <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort"><span
-                                        style="width: 182px;">Company Name</span></th>
-                                <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort"><span
-                                        style="width: 182px;">Status</span></th>
-                                <th data-field="Type" data-autohide-disabled="false"
-                                    class="kt-datatable__cell kt-datatable__cell--sort kt-datatable__cell--sorted" data-sort="asc"><span
-                                        style="width: 182px;">Type<i class="flaticon2-arrow-up"></i></span></th>
-                                <th data-field="Actions" data-autohide-disabled="false"
-                                    class="kt-datatable__cell kt-datatable__cell--sort"><span style="width: 110px;">Actions</span></th>
+                                <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Order ID</span>
+                                </th>
+                                <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Country</span>
+                                </th>
+                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Ship Date</span>
+                                </th>
+                                <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Company Name</span>
+                                </th>
+                                <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Status</span>
+                                </th>
+                                <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Type</span>
+                                </th>
+                                <th data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 110px;">Actions</span>
+                                </th>
                             </tr>
                         </thead>
-                        <tbody class="kt-datatable__body" style="">
+                        <tbody class="kt-datatable__body">
+
                             <tr class="kt-datatable__row kt-datatable__row--hover" style="left: 0px;" ng-repeat="item in vm.lstData">
                                 <td class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check">
                                     <span style="width: 20px;">
@@ -175,30 +133,48 @@
                                 <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.country}}</span></td>
                                 <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.shipDate}}</span></td>
                                 <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.companyName}}</span></td>
+
                                 <td data-field="Status" class="kt-datatable__cell">
                                     <span style="width: 182px;">
                                         <span class="kt-badge  kt-badge--info kt-badge--inline kt-badge--pill">Info</span>
                                     </span>
                                 </td>
-                                <td class="kt-datatable__cell--sorted kt-datatable__cell" data-field="Type"
-                                    data-autohide-disabled="false"><span style="width: 182px;"><span
-                                            class="kt-badge kt-badge--danger kt-badge--dot"></span>&nbsp;<span
-                                            class="kt-font-bold kt-font-danger">Online</span></span></td>
-                                <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell"><span
-                                        style="overflow: visible; position: relative; width: 110px;">
-                                        <div class="dropdown"> <a data-toggle="dropdown"
-                                                class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i class="la la-cog"></i> </a>
-                                            <div class="dropdown-menu dropdown-menu-right"> <a href="#" class="dropdown-item"><i
-                                                        class="la la-edit"></i> Edit Details</a> <a href="#" class="dropdown-item"><i
-                                                        class="la la-leaf"></i> Update Status</a> <a href="#" class="dropdown-item"><i
-                                                        class="la la-print"></i> Generate Report</a> </div>
-                                        </div> <a title="Edit details" class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i
-                                                class="la la-edit"></i> </a> <a title="Delete"
-                                            class="btn btn-sm btn-clean btn-icon btn-icon-md"> <i class="la la-trash"></i> </a>
-                                    </span></td>
+
+                                <td class="kt-datatable__cell--sorted kt-datatable__cell" data-field="Type" data-autohide-disabled="false">
+                                    <span style="width: 182px;">
+                                        <span class="kt-badge kt-badge--danger kt-badge--dot"></span>
+                                            &nbsp;
+                                        <span class="kt-font-bold kt-font-danger">Online</span>
+                                    </span>
+                                </td>
+
+                                <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
+                                    <span style="overflow: visible; position: relative; width: 110px;">
+                                        <div class="dropdown">
+                                            <a data-toggle="dropdown" class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                <i class="la la-cog"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a href="#" class="dropdown-item"><i class="la la-edit"></i> Edit Details</a>
+                                                <a href="#" class="dropdown-item"><i class="la la-leaf"></i> Update Status</a>
+                                                <a href="#" class="dropdown-item"><i class="la la-print"></i> Generate Report</a>
+                                            </div>
+                                        </div>
+                                            <a title="Edit details" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.editItem(item)">
+                                                <i class="la la-edit"></i> 
+                                            </a>
+                                            <a title="Delete" class="btn btn-sm btn-clean btn-icon btn-icon-md">
+                                                <i class="la la-trash"></i>
+                                            </a>
+                                    </span>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
+
+                    <!-- ------------------------------------------------------------------------------------------------------ -->
+                    <!-- Paging table -->
+                    <!-- ------------------------------------------------------------------------------------------------------ -->
                     <div class="kt-datatable__pager kt-datatable--paging-loaded">
                         <ul class="kt-datatable__pager-nav">
                             <li><a title="First"
@@ -252,7 +228,9 @@
                     </div>
                 </div>
 
+                <!-- ----------------------------------------------------------------------------------------- -->
                 <!--end: Datatable -->
+                <!-- ----------------------------------------------------------------------------------------- -->
             </div>
         </div>
     </div>
