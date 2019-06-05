@@ -13,6 +13,7 @@
         vm.status = '1';
         vm.type = '1';
         vm.checkedAllItem = false;
+        vm.deleteManyItem = false;
 
         vm.lstStatus = [];
         vm.lstType = [];
@@ -21,6 +22,8 @@
         vm.changeCheckAllItem = changeCheckAllItem;
         vm.changeCheckedItem = changeCheckedItem;
         vm.editItem = editItem;
+        vm.deleteItem = deleteItem;
+        vm.addNewItem = addNewItem;
 
         vm.lstType = [
             {
@@ -145,7 +148,37 @@
                 templateUrl: 'app/entities/devices/devices.edit.html',
                 controller: 'DeviceEditController',
                 controllerAs: 'vm',
-                size: 'lg',
+                size: 'xl',
+                resolve: {
+                  dataItem: function () {
+                    return item;
+                  }
+                }
+            });
+        }
+
+        function addNewItem(){
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'app/entities/devices/devices.edit.html',
+                controller: 'DeviceEditController',
+                controllerAs: 'vm',
+                size: 'xl',
+                resolve: {
+                  dataItem: function () {
+                    return null;
+                  }
+                }
+            });
+        }
+
+        function deleteItem(item){
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'app/entities/devices/devices.delete.html',
+                controller: 'DeviceDeleteController',
+                controllerAs: 'vm',
+                size: 'md',
                 resolve: {
                   dataItem: function () {
                     return item;
@@ -158,6 +191,8 @@
             angular.forEach(vm.lstData, function(element){
                 element.checked = vm.checkedAllItem
             });
+
+            vm.deleteManyItem = vm.checkedAllItem;
         }
 
         function changeCheckedItem(){
@@ -174,6 +209,8 @@
             }else{
                 vm.checkedAllItem = false;
             }
+
+            vm.deleteManyItem = count > 0 ? true : false;
         }
 
         $(function () {

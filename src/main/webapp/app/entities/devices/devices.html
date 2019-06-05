@@ -18,7 +18,13 @@
                         </a>
                         &nbsp;
                         <div class="dropdown dropdown-inline">
-                            <button type="button" class="btn btn-brand btn-icon-sm">
+                            <button type="button" class="btn btn-danger" ng-if="vm.deleteManyItem">
+                                <i class="la la-trash"></i> Delete selected
+                            </button>
+                        </div>
+                        &nbsp;
+                        <div class="dropdown dropdown-inline">
+                            <button type="button" class="btn btn-brand btn-icon-sm" ng-click="vm.addNewItem()">
                                 <i class="la la-plus"></i> Add New
                             </button>
                         </div>
@@ -150,22 +156,12 @@
 
                                 <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
                                     <span style="overflow: visible; position: relative; width: 110px;">
-                                        <div class="dropdown">
-                                            <a data-toggle="dropdown" class="btn btn-sm btn-clean btn-icon btn-icon-md">
-                                                <i class="la la-cog"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right">
-                                                <a href="#" class="dropdown-item"><i class="la la-edit"></i> Edit Details</a>
-                                                <a href="#" class="dropdown-item"><i class="la la-leaf"></i> Update Status</a>
-                                                <a href="#" class="dropdown-item"><i class="la la-print"></i> Generate Report</a>
-                                            </div>
-                                        </div>
-                                            <a title="Edit details" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.editItem(item)">
-                                                <i class="la la-edit"></i> 
-                                            </a>
-                                            <a title="Delete" class="btn btn-sm btn-clean btn-icon btn-icon-md">
-                                                <i class="la la-trash"></i>
-                                            </a>
+                                        <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.editItem(item)">
+                                            <i class="la la-edit"></i> 
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.deleteItem(item)">
+                                            <i class="la la-trash"></i>
+                                        </button>
                                     </span>
                                 </td>
                             </tr>

@@ -2516,8 +2516,8 @@ input[type="button"].btn-block {
     .fade {
       -webkit-transition: none;
       transition: none; } }
-  .fade:not(.show) {
-    opacity: 0; }
+  /* .fade:not(.show) {
+    opacity: 0; } */
 
 .collapse:not(.show) {
   display: none; }
@@ -4689,6 +4689,9 @@ a.close.disabled {
   .modal-open .modal {
     overflow-x: hidden;
     overflow-y: auto; }
+  .modal{
+    animation: kt-header-menu-submenu-fade-in 0.3s ease 1, kt-header-menu-submenu-move-down 0.3s ease-out 1;
+  }
 
 .modal {
   position: fixed;
@@ -4711,8 +4714,9 @@ a.close.disabled {
     transition: -webkit-transform 0.3s ease-out;
     transition: transform 0.3s ease-out;
     transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
-    -webkit-transform: translate(0, -50px);
-    transform: translate(0, -50px); }
+    /* -webkit-transform: translate(0, -50px);
+    transform: translate(0, -50px); */
+   }
     @media (prefers-reduced-motion: reduce) {
       .modal.fade .modal-dialog {
         -webkit-transition: none;
@@ -4775,9 +4779,11 @@ a.close.disabled {
   pointer-events: auto;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ebedf2;
+  /* border: 1px solid #ebedf2; */
   border-radius: 0.3rem;
-  outline: 0; }
+  outline: 0; 
+  box-shadow: 0px 15px 50px 0px rgba(82, 63, 105, 0.15);
+}
 
 .modal-backdrop {
   position: fixed;
@@ -4850,7 +4856,7 @@ a.close.disabled {
 @media (min-width: 576px) {
   .modal-dialog {
     max-width: 500px;
-    margin: 1.75rem auto; }
+    margin: 4.75rem auto; }
   .modal-dialog-scrollable {
     max-height: calc(100% - 3.5rem); }
     .modal-dialog-scrollable .modal-content {
