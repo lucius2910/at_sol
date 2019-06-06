@@ -15,31 +15,87 @@
         vm.lstMenu = [
             {
                 id: 1,
-                link: 'devices',
-                text: 'Thiết bị',
-                icon: 'fa fa-server',
-                subItems:[]
-            },
-            {
-                id: 2,
-                link: 'device-group',
-                text: 'Nhóm thiết bị',
+                text: 'Quản lý thiết bị',
                 icon: 'fa fa-server',
                 subItems:[
                     {
-                        id: 4,
+                        id: 11,
                         link: 'devices',
-                        text: 'Thiết bị 1',
-                        icon: 'fa fa-star'
+                        text: 'Thiết bị',
+                        icon: 'fa fa-microchip'
                     },
                     {
-                        id: 5,
-                        link: 'devices',
-                        text: 'Thiết bị 2',
-                        icon: 'fa fa-star'
+                        id: 12,
+                        link: 'group-devices',
+                        text: 'Nhóm thiết bị',
+                        icon: 'fa fa-cubes'
+                    }
+                ]
+            },
+            {
+                id: 2,
+                text: 'Quản lý khách hàng',
+                icon: 'fa fa-users',
+                subItems:[
+                    {
+                        id: 21,
+                        link: 'customers',
+                        text: 'Tài khoản',
+                        icon: 'fa fa-user'
+                    },
+                    {
+                        id: 22,
+                        link: 'roles',
+                        text: 'Roles',
+                        icon: 'fa fa-user-circle'
+                    },
+                    {
+                        id: 23,
+                        link: 'permissions',
+                        text: 'Permission',
+                        icon: 'fa fa-cogs'
+                    }
+                ]
+            },
+            {
+                id: 3,
+                text: 'Quản lý vùng',
+                icon: 'fa fa-map',
+                subItems:[
+                    {
+                        id: 31,
+                        link: 'areas',
+                        text: 'Danh sách khu vực',
+                        icon: 'fa fa-microchip'
+                    },
+                    {
+                        id: 22,
+                        link: 'area-config',
+                        text: 'Thiết lập thông số',
+                        icon: 'fa fa-wrench'
                     }
                 ]
             }
+            // {
+            //     id: 2,
+            //     link: 'device-group',
+            //     text: 'Nhóm thiết bị',
+            //     icon: 'fa fa-server',
+            //     subItems:[
+            //         {
+            //             id: 4,
+            //             link: 'devices',
+            //             text: 'Thiết bị 1',
+            //             icon: 'fa fa-star'
+            //         },
+            //         {
+            //             id: 5,
+            //             link: 'devices',
+            //             text: 'Thiết bị 2',
+            //             icon: 'fa fa-star'
+            //         }
+            //     ]
+            // }
         ]
 
         vm.isAuthenticated = Principal.isAuthenticated;
