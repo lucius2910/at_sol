@@ -19,16 +19,16 @@
                 icon: 'fa fa-server',
                 subItems:[
                     {
+                        id: 12,
+                        link: 'devices-group',
+                        text: 'Nhóm thiết bị',
+                        icon: 'fa fa-cubes'
+                    },
+                    {
                         id: 11,
                         link: 'devices',
                         text: 'Thiết bị',
                         icon: 'fa fa-microchip'
-                    },
-                    {
-                        id: 12,
-                        link: 'group-devices',
-                        text: 'Nhóm thiết bị',
-                        icon: 'fa fa-cubes'
                     }
                 ]
             },
