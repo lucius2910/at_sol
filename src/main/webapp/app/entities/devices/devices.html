@@ -19,12 +19,12 @@
                         &nbsp;
                         <div class="dropdown dropdown-inline">
                             <button type="button" class="btn btn-danger" ng-if="vm.deleteManyItem">
-                                <i class="la la-trash"></i> Delete selected
+                                <i class="la la-trash"></i> Delete All
                             </button>
                         </div>
                         &nbsp;
                         <div class="dropdown dropdown-inline">
-                            <button type="button" class="btn btn-brand btn-icon-sm" ng-click="vm.addNewItem()">
+                            <button type="button" class="btn btn-primary" ng-click="vm.addNewItem()">
                                 <i class="la la-plus"></i> Add New
                             </button>
                         </div>
@@ -39,11 +39,16 @@
                         <div class="col-xl-12 order-2 order-xl-1">
                             <div class="row align-items-center">
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
-                                    <div class="kt-input-icon kt-input-icon--left">
-                                        <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
-                                        <span class="kt-input-icon__icon kt-input-icon__icon--left">
-                                            <span><i class="la la-search"></i></span>
-                                        </span>
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label">
+                                            <label>Search:</label>
+                                        </div>
+                                        <div class="kt-form__control kt-input-icon kt-input-icon--left">
+                                            <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                                            <span class="kt-input-icon__icon kt-input-icon__icon--left">
+                                                <span><i class="la la-search"></i></span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">

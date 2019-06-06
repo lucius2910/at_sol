@@ -27990,6 +27990,8 @@ body {
     justify-content: flex-begin; }
     .kt-aside--minimize .kt-aside__brand .kt-aside__brand-logo img {
       display: none; }
+    .kt-aside--minimize .kt-aside__brand .kt-aside__brand-logo h3 {
+      display: none; }
   .kt-aside__brand .kt-aside__brand-tools {
     display: -webkit-box;
     display: -ms-flexbox;
