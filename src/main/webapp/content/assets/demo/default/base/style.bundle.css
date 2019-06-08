@@ -9566,12 +9566,12 @@ input.btn.btn-label {
 
 .btn.btn-label-brand {
   background-color: rgba(93, 120, 255, 0.1);
-  color: #5d78ff;
+  color: #5d78ff !important;
   cursor: text !important; }
 
 .btn.btn-label-brand-o2 {
   background-color: rgba(93, 120, 255, 0.2);
-  color: #5d78ff;
+  color: #5d78ff !important;
   cursor: text !important; }
 
 a.btn.btn-label-brand,
@@ -9662,12 +9662,12 @@ input.btn.btn-label-primary {
 
 .btn.btn-label-success {
   background-color: rgba(10, 187, 135, 0.1);
-  color: #0abb87;
+  color: #0abb87 !important;
   cursor: text !important; }
 
 .btn.btn-label-success-o2 {
   background-color: rgba(10, 187, 135, 0.2);
-  color: #0abb87;
+  color: #0abb87 !important;
   cursor: text !important; }
 
 a.btn.btn-label-success,
@@ -9734,12 +9734,12 @@ input.btn.btn-label-warning {
 
 .btn.btn-label-danger {
   background-color: rgba(253, 57, 122, 0.1);
-  color: #fd397a;
+  color: #fd397a !important;
   cursor: text !important; }
 
 .btn.btn-label-danger-o2 {
   background-color: rgba(253, 57, 122, 0.2);
-  color: #fd397a;
+  color: #fd397a !important;
   cursor: text !important; }
 
 a.btn.btn-label-danger,

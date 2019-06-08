@@ -26,7 +26,7 @@
                                     </div>
                 
                                     <!--begin::Form-->
-                                    <form class="kt-form" action="" novalidate="novalidate" autocomplete="off">
+                                    <form class="kt-form" ng-submit="vm.login()" novalidate="novalidate" autocomplete="off">
                                         <div class="form-group">
                                             <input class="form-control" type="text" placeholder="Email" name="email" autocomplete="off">
                                         </div>
@@ -39,7 +39,7 @@
                                             <a href="#" class="kt-link kt-login__link-forgot">
                                                 Forgot Password ?
                                             </a>
-                                            <button id="kt_login_signin_submit" class="btn btn-primary btn-elevate kt-login__btn-primary">Sign In</button>
+                                            <button type="submit" class="btn btn-primary btn-elevate kt-login__btn-primary">Sign In</button>
                                         </div>
                 
                                         <!--end::Action-->

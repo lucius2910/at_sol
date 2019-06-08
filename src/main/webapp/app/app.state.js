@@ -17,7 +17,9 @@
                     controllerAs: 'vm'
                 },
                 'header@': {
-                    templateUrl: 'app/layouts/header/header.html'
+                    templateUrl: 'app/layouts/header/header.html',
+                    controller: 'HeaderController',
+                    controllerAs: 'vm'
                 }
             },
             resolve: {

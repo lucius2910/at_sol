@@ -24,6 +24,7 @@
     <link href="./content/assets/vendor/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" type="text/css" />
     <link href="./content/assets/vendor/line-awesome/css/line-awesome.css" rel="stylesheet" type="text/css" />
     <link href="./content/assets/vendor/fontawesome5/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link href="./content/assets/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css" />
     <link href="./content/assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
     <!--begin::Layout Skins(used by all pages) -->
@@ -83,7 +84,7 @@
             <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
 
                 <!-- begin:: Header -->
-                <div id="kt_header" ui-view="header" ng-cloak class="kt-header kt-grid__item  kt-header--fixed ">
+                <div id="kt_header" ui-view="header" ng-cloak class="kt-header kt-grid__item  kt-header--fixed" style="display: flex; justify-content: flex-end;">
                 </div>
                 <!-- end:: Header -->
 
@@ -132,6 +133,7 @@
     <script src="bower_components/wnumb/wNumb.js"></script>
     <script src="bower_components/tether/dist/js/tether.js"></script>
     <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js"></script>
+    <script src="bower_components/chart.js/dist/Chart.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -158,6 +160,7 @@
     <script src="./content/assets/vendor/bootstrap4/dist/js/bootstrap.js"></script>
     <script src="./content/assets/vendor/perfect-scrollbar/dist/perfect-scrollbar.js"></script>
     <script src="./content/assets/vendor/tool-tip/umd/tooltip.min.js"></script>
+    <script src="./content/assets/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
     <script>
         var KTAppOptions = {
             "colors": {
@@ -198,9 +201,14 @@
     <script src="app/services/auth/account.service.js"></script>
     <script src="app/layouts/navbar/navbar.controller.js"></script>
     <script src="app/layouts/navbar/active-menu.directive.js"></script>
+    <script src="app/layouts/header/header.controller.js"></script>
     <script src="app/layouts/error/error.state.js"></script>
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
+    <script src="app/entities/system-log/system-log.state.js"></script>
+    <script src="app/entities/system-log/system-log.edit.controller.js"></script>
+    <script src="app/entities/system-log/system-log.delete.controller.js"></script>
+    <script src="app/entities/system-log/system-log.controller.js"></script>
     <script src="app/entities/roles/roles.state.js"></script>
     <script src="app/entities/roles/roles.edit.controller.js"></script>
     <script src="app/entities/roles/roles.delete.controller.js"></script>

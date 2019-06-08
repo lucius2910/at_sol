@@ -15,6 +15,9 @@
         vm.checkedAllItem = false;
         vm.deleteManyItem = false;
 
+        vm.totalItems = 175;
+        vm.currentPage = 1;
+
         vm.lstStatus = [];
         vm.lstType = [];
         vm.lstData = [];

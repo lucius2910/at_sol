@@ -13,6 +13,7 @@
         vm.account = null;
         vm.isAuthenticated = null;
         vm.login = LoginService.open;
+        vm.login = login;
         vm.register = register;
         $scope.$on('authenticationSuccess', function() {
             getAccount();
@@ -26,8 +27,13 @@
                 vm.isAuthenticated = Principal.isAuthenticated;
             });
         }
+
         function register () {
             $state.go('register');
+        }
+
+        function login(){
+            $state.go('home');
         }
     }
 })();

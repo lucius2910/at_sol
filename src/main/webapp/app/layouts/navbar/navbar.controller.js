@@ -14,6 +14,13 @@
 
         vm.lstMenu = [
             {
+                id: 0,
+                text: 'Dashboard',
+                link: 'home',
+                icon: 'fa fa-tachometer-alt',
+                subItems:[]
+            },
+            {
                 id: 1,
                 text: 'Quản lý thiết bị',
                 icon: 'fa fa-server',
@@ -66,7 +73,7 @@
                         id: 31,
                         link: 'areas',
                         text: 'Danh sách khu vực',
-                        icon: 'fa fa-microchip'
+                        icon: 'fa fa-map-signs'
                     },
                     {
                         id: 22,

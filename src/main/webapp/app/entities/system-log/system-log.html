@@ -7,7 +7,7 @@
                         <i class="kt-font-brand flaticon2-line-chart"></i>
                     </span>
                     <h3 class="kt-portlet__head-title">
-                        Danh sách khách hàng
+                        System log
                     </h3>
                 </div>
                 <div class="kt-portlet__head-toolbar">
@@ -16,18 +16,6 @@
                             <i class="la la-long-arrow-left"></i>
                             Back
                         </a>
-                        &nbsp;
-                        <div class="dropdown dropdown-inline">
-                            <button type="button" class="btn btn-danger" ng-if="vm.deleteManyItem">
-                                <i class="la la-trash"></i> Delete selected
-                            </button>
-                        </div>
-                        &nbsp;
-                        <div class="dropdown dropdown-inline">
-                            <button type="button" class="btn btn-brand btn-icon-sm" ng-click="vm.addNewItem()">
-                                <i class="la la-plus"></i> Add New
-                            </button>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -39,12 +27,20 @@
                         <div class="col-xl-12 order-2 order-xl-1">
                             <div class="row align-items-center">
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
-                                    <div class="kt-input-icon kt-input-icon--left">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label">
+                                            <label>Content:</label>
+                                        </div>
+                                        <div class="kt-form__control">
+                                            <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="kt-input-icon kt-input-icon--left">
                                         <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
                                         <span class="kt-input-icon__icon kt-input-icon__icon--left">
                                             <span><i class="la la-search"></i></span>
                                         </span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
@@ -58,18 +54,19 @@
                                         </div>
                                     </div>
                                 </div>
+                                
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
                                         <div class="kt-form__label">
-                                            <label>Type:</label>
+                                            <label>Date:</label>
                                         </div>
                                         <div class="kt-form__control">
-                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.type">
-                                                <option value="{{item.value}}" ng-repeat="item in vm.lstType">{{item.title}}</option>
-                                            </select>
+                                            <div id='kt_daterangepicker'>
+                                                <input type='text' class="form-control" readonly placeholder="Select date range" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
                                         <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -94,76 +91,27 @@
                     <table class="kt-datatable__table" style="display: block; min-height: 300px;">
                         <thead class="kt-datatable__head">
                             <tr class="kt-datatable__row" style="left: 0px;">
-                                <th data-field="RecordID" class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check">
-                                    <span style="width: 20px;">
-                                        <label class="kt-checkbox kt-checkbox--single kt-checkbox--all kt-checkbox--solid">
-                                            <input type="checkbox" ng-model="vm.checkedAllItem" ng-change="vm.changeCheckAllItem()">&nbsp;<span></span>
-                                        </label>
-                                    </span>
+                                <th data-field="CreatedDate" class="kt-datatable__cell kt-datatable__cell--sort" style="width: 150px;">
+                                    <span>Created Date</span>
                                 </th>
-                                <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Order ID</span>
+                                <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort" style="width: 150px;">
+                                    <span>Type</span>
                                 </th>
-                                <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Country</span>
-                                </th>
-                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Ship Date</span>
-                                </th>
-                                <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Company Name</span>
-                                </th>
-                                <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Status</span>
-                                </th>
-                                <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Type</span>
-                                </th>
-                                <th data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 110px;">Actions</span>
+                                <th data-field="Content" class="kt-datatable__cell kt-datatable__cell--sort" style="width: calc(100% - 300px);">
+                                    <span>Content</span>
                                 </th>
                             </tr>
                         </thead>
                         <tbody class="kt-datatable__body">
 
                             <tr class="kt-datatable__row kt-datatable__row--hover" style="left: 0px;" ng-repeat="item in vm.lstData">
-                                <td class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check">
-                                    <span style="width: 20px;">
-                                        <label class="kt-checkbox kt-checkbox--single kt-checkbox--solid">
-                                            <input type="checkbox" ng-model="item.checked" ng-change="vm.changeCheckedItem()">&nbsp;
-                                            <span></span>
-                                        </label>
-                                    </span>
+                                <td data-field="CreatedDate" class="kt-datatable__cell" style="width: 150px;"><span>{{item.createdDate}}</span></td>
+                                <td data-field="Type" class="kt-datatable__cell" style="width: 150px;">
+                                    <span class="btn btn-bold btn-sm btn-font-sm  btn-label-danger" ng-if="item.type == 1">Turn Off</span>
+                                    <span class="btn btn-bold btn-sm btn-font-sm  btn-label-success" ng-if="item.type == 2">Turn On</span>
+                                    <span class="btn btn-bold btn-sm btn-font-sm  btn-label-brand" ng-if="item.type == 3">Error</span>
                                 </td>
-                                <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 182px;">{{item.id}}</span></td>
-                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.country}}</span></td>
-                                <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.shipDate}}</span></td>
-                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.companyName}}</span></td>
-
-                                <td data-field="Status" class="kt-datatable__cell">
-                                    <span style="width: 182px;">
-                                        <span class="kt-badge  kt-badge--info kt-badge--inline kt-badge--pill">Info</span>
-                                    </span>
-                                </td>
-
-                                <td class="kt-datatable__cell--sorted kt-datatable__cell" data-field="Type" data-autohide-disabled="false">
-                                    <span style="width: 182px;">
-                                        <span class="kt-badge kt-badge--danger kt-badge--dot"></span>
-                                            &nbsp;
-                                        <span class="kt-font-bold kt-font-danger">Online</span>
-                                    </span>
-                                </td>
-
-                                <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
-                                    <span style="overflow: visible; position: relative; width: 110px;">
-                                        <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.editItem(item)">
-                                            <i class="la la-edit"></i> 
-                                        </button>
-                                        <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.deleteItem(item)">
-                                            <i class="la la-trash"></i>
-                                        </button>
-                                    </span>
-                                </td>
+                                <td data-field="Content" class="kt-datatable__cell" style="width: calc(100% - 3000px);"><span>{{item.content}}</span></td>
                             </tr>
                         </tbody>
                     </table>

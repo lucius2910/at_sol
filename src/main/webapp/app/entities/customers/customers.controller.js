@@ -12,6 +12,10 @@
 
         vm.status = '1';
         vm.type = '1';
+
+        vm.totalItems = 175;
+        vm.currentPage = 1;
+
         vm.checkedAllItem = false;
         vm.deleteManyItem = false;
 

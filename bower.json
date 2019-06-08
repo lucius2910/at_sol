@@ -37,7 +37,8 @@
     "tether": "^1.4.4",
     "bootstrap-datepicker": "^1.9.0",
     "bootstrap4": "v4.3.1",
-    "bootstrap-select": "^1.13.10"
+    "bootstrap-select": "^1.13.10",
+    "chart.js": "^2.8.0"
   },
   "devDependencies": {
     "angular-mocks": "1.5.8"

@@ -33,7 +33,7 @@ module.exports = function (config) {
             'src/main/webapp/bower_components/wnumb/wNumb.js',
             'src/main/webapp/bower_components/tether/dist/js/tether.js',
             'src/main/webapp/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js',
-            'src/main/webapp/bower_components/perfect-scrollbar/dist/perfect-scrollbar.common.js',
+            'src/main/webapp/bower_components/chart.js/dist/Chart.js',
             'src/main/webapp/bower_components/angular/angular.js',
             'src/main/webapp/bower_components/angular-aria/angular-aria.js',
             'src/main/webapp/bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
@@ -52,6 +52,7 @@ module.exports = function (config) {
             'src/main/webapp/bower_components/bootstrap-ui-datetime-picker/dist/datetime-picker.js',
             'src/main/webapp/bower_components/ng-file-upload/ng-file-upload.js',
             'src/main/webapp/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
+            'src/main/webapp/bower_components/bootstrap-select/dist/js/bootstrap-select.js',
             'src/main/webapp/bower_components/angular-mocks/angular-mocks.js',
             // endbower
             'src/main/webapp/app/app.module.js',
