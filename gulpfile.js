@@ -51,6 +51,7 @@ gulp.task('copy:images', copy.images);
 
 gulp.task('copy:assets', copy.assets);
 
+
 gulp.task('images', function () {
     return gulp.src(config.app + 'content/images/**')
         .pipe(plumber({errorHandler: handleErrors}))

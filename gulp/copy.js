@@ -43,7 +43,7 @@ function languages() {
 
 function fonts() {
     return es.merge(
-        gulp.src(config.app + 'content/**/*.{woff,woff2,svg,ttf,eot,otf}')
+        gulp.src(config.app + 'content/**/*.{woff,woff2,ttf,eot,otf}')
         .pipe(plumber({errorHandler: handleErrors}))
         .pipe(changed(config.dist + 'content/fonts/'))
         .pipe(flatten())
