@@ -82,67 +82,45 @@
         vm.lstData = [
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                username: 'Lê Tiến Hoàn',
+                create_date: '4/23/2016',
+                create_by: 'Admin',
+                isActive: 1
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                username: 'Lưu Công Thìn',
+                create_date: '4/23/2016',
+                create_by: 'Admin',
+                isActive: 1
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                username: 'Lê Tiến A',
+                create_date: '4/23/2016',
+                create_by: 'Admin',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                username: 'Lê Tiến B',
+                create_date: '4/23/2016',
+                create_by: 'Admin',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                username: 'Lê Tiến C',
+                create_date: '4/23/2016',
+                create_by: 'Admin',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                username: 'Lê Tiến E',
+                create_date: '4/23/2016',
+                create_by: 'Admin',
+                isActive: 0
             }
         ];
 

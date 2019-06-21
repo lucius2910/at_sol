@@ -41,7 +41,7 @@
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
                                         <div class="kt-form__label">
-                                            <label>Search:</label>
+                                            <label>Tìm kiếm:</label>
                                         </div>
                                         <div class="kt-form__control kt-input-icon kt-input-icon--left">
                                             <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
@@ -54,7 +54,7 @@
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
                                         <div class="kt-form__label">
-                                            <label>Status:</label>
+                                            <label>Trạng thái:</label>
                                         </div>
                                         <div class="kt-form__control">
                                             <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.status">
@@ -66,7 +66,31 @@
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
                                         <div class="kt-form__label">
-                                            <label>Type:</label>
+                                            <label>Nhóm thiết bị:</label>
+                                        </div>
+                                        <div class="kt-form__control">
+                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.device_group">
+                                                <option value="{{item.id}}" ng-repeat="item in vm.lstDeviceGroup">{{item.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label">
+                                            <label>Loại thiết bị:</label>
+                                        </div>
+                                        <div class="kt-form__control">
+                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.device_type">
+                                                <option value="{{item.id}}" ng-repeat="item in vm.lstDeviceType">{{item.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label">
+                                            <label>Manudate:</label>
                                         </div>
                                         <div class="kt-form__control">
                                             <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.type">
@@ -106,26 +130,32 @@
                                         </label>
                                     </span>
                                 </th>
-                                <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Order ID</span>
+                                <th data-field="ID" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 100px;">ID</span>
                                 </th>
-                                <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Country</span>
+                                <th data-field="code" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Mã thiết bị</span>
                                 </th>
-                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Ship Date</span>
+                                <th data-field="name" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Tên thiết bị</span>
                                 </th>
-                                <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Company Name</span>
+                                <th data-field="name-device-group" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Tên nhóm thiết bị</span>
                                 </th>
-                                <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Status</span>
+                                <th data-field="device-type" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Loại thiết bị</span>
                                 </th>
-                                <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Type</span>
+                                <th data-field="manudate" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Manudate</span>
+                                </th>
+                                <th data-field="note" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 110px;">Ghi chú</span>
+                                </th>
+                                <th data-field="status" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 110px;">Trạng thái</span>
                                 </th>
                                 <th data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 110px;">Actions</span>
+                                    <span style="width: 110px;">Hành động</span>
                                 </th>
                             </tr>
                         </thead>
@@ -140,26 +170,21 @@
                                         </label>
                                     </span>
                                 </td>
-                                <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 182px;">{{item.id}}</span></td>
-                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.country}}</span></td>
-                                <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.shipDate}}</span></td>
-                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.companyName}}</span></td>
-
-                                <td data-field="Status" class="kt-datatable__cell">
-                                    <span style="width: 182px;">
-                                        <span class="kt-badge  kt-badge--info kt-badge--inline kt-badge--pill">Info</span>
+                                <td data-field="ID" class="kt-datatable__cell"><span style="width: 100px;">{{item.id}}</span></td>
+                                <td data-field="code" class="kt-datatable__cell"><span style="width: 182px;">{{item.code}}</span></td>
+                                <td data-field="name" class="kt-datatable__cell"><span style="width: 182px;">{{item.name}}</span></td>
+                                <td data-field="name-device-group" class="kt-datatable__cell"><span style="width: 182px;">{{item.name_device_group}}</span></td>
+                                <td data-field="device-type" class="kt-datatable__cell"><span style="width: 182px;">{{item.device_type}}</span></td>
+                                <td data-field="manudate" class="kt-datatable__cell"><span style="width: 182px;">{{item.manudate}}</span></td>
+                                <td data-field="note" class="kt-datatable__cell"><span style="width: 110px;">{{item.note}}</span></td>
+                                <td data-field="status" class="kt-datatable__cell">
+                                    <span style="width: 110px;">
+                                        <span ng-if="item.isActive == 0">Không hoạt động</span>
+                                        <span ng-if="item.isActive == 1">Hoạt động</span>
                                     </span>
                                 </td>
 
-                                <td class="kt-datatable__cell--sorted kt-datatable__cell" data-field="Type" data-autohide-disabled="false">
-                                    <span style="width: 182px;">
-                                        <span class="kt-badge kt-badge--danger kt-badge--dot"></span>
-                                            &nbsp;
-                                        <span class="kt-font-bold kt-font-danger">Online</span>
-                                    </span>
-                                </td>
-
-                                <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
+                                <td data-field="align-items-centertions" data-autohide-disabled="false" class="kt-datatable__cell">
                                     <span style="overflow: visible; position: relative; width: 110px;">
                                         <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.editItem(item)">
                                             <i class="la la-edit"></i> 

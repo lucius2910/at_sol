@@ -82,67 +82,51 @@
         vm.lstData = [
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-1',
+                name: 'nhóm thiết bị 1',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-2',
+                name: 'nhóm thiết bị 2',
+                isActive: 1
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-3',
+                name: 'nhóm thiết bị 3',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-4',
+                name: 'nhóm thiết bị 4',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-5',
+                name: 'nhóm thiết bị 5',
+                isActive: 1
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-6',
+                name: 'nhóm thiết bị 6',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-7',
+                name: 'nhóm thiết bị 7',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'devices-8',
+                name: 'nhóm thiết bị 8',
+                isActive: 0
             }
         ];
 

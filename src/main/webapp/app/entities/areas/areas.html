@@ -102,22 +102,28 @@
                                     </span>
                                 </th>
                                 <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Order ID</span>
+                                    <span style="width: 182px;">ID</span>
                                 </th>
                                 <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Country</span>
+                                    <span style="width: 182px;">Mã khu vực</span>
                                 </th>
                                 <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Ship Date</span>
+                                    <span style="width: 182px;">Khu vực</span>
                                 </th>
                                 <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Company Name</span>
+                                    <span style="width: 182px;">Huyện</span>
                                 </th>
                                 <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Status</span>
+                                    <span style="width: 182px;">Tỉnh</span>
                                 </th>
                                 <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Type</span>
+                                    <span style="width: 182px;">Quốc gia</span>
+                                </th>
+                                <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Vị trí</span>
+                                </th>
+                                <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 182px;">Trạng thái</span>
                                 </th>
                                 <th data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
                                     <span style="width: 110px;">Actions</span>
@@ -136,10 +142,13 @@
                                     </span>
                                 </td>
                                 <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 182px;">{{item.id}}</span></td>
-                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.country}}</span></td>
-                                <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.shipDate}}</span></td>
-                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.companyName}}</span></td>
-
+                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.code}}</span></td>
+                                <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.name}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.name_district}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.name_province}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.name_country}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.location}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.isActive}}</span></td>
                                 <td data-field="Status" class="kt-datatable__cell">
                                     <span style="width: 182px;">
                                         <span class="kt-badge  kt-badge--info kt-badge--inline kt-badge--pill">Info</span>

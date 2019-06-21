@@ -82,67 +82,82 @@
         vm.lstData = [
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'KH1',
+                name: 'Khu vực 1',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'KH2',
+                name: 'Khu vực 2',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'KH13',
+                name: 'Khu vực 3',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'KH4',
+                name: 'Khu vực 4',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'KH5',
+                name: 'Khu vực5',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 0
+            },
+            {
+                code: 'KH1',
+                name: 'Khu vực 1',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 1
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'KH1',
+                name: 'Khu vực 1',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 0
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'KH1',
+                name: 'Khu vực 1',
+                name_district: 'Huyện Hương Khê',
+                name_province: 'Tỉnh Hà Tĩnh',
+                name_country: 'Việt Nam',
+                location: '12,34 432,6',
+                isActive: 0
             }
         ];
 
