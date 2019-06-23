@@ -48,8 +48,8 @@
                                 </div>
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
-                                        <div class="kt-form__label">
-                                            <label>Status:</label>
+                                        <div class="kt-form__label" style="width: 20%">
+                                            <label>Trạng thái:</label>
                                         </div>
                                         <div class="kt-form__control">
                                             <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.status">
@@ -61,11 +61,35 @@
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
                                         <div class="kt-form__label">
-                                            <label>Type:</label>
+                                            <label>Huyện:</label>
                                         </div>
                                         <div class="kt-form__control">
-                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.type">
-                                                <option value="{{item.value}}" ng-repeat="item in vm.lstType">{{item.title}}</option>
+                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.district">
+                                                <option value="{{item.value}}" ng-repeat="item in vm.lstDistrict">{{item.title}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label">
+                                            <label>Tỉnh:</label>
+                                        </div>
+                                        <div class="kt-form__control">
+                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.province">
+                                                <option value="{{item.value}}" ng-repeat="item in vm.lstProvince">{{item.title}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile mt-3">
+                                    <div class="kt-form__group kt-form__group--inline">
+                                        <div class="kt-form__label" style="width: 20%">
+                                            <label>Quốc gia:</label>
+                                        </div>
+                                        <div class="kt-form__control">
+                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.country">
+                                                <option value="{{item.value}}" ng-repeat="item in vm.lstCountry">{{item.title}}</option>
                                             </select>
                                         </div>
                                     </div>
@@ -148,7 +172,12 @@
                                 <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.name_province}}</span></td>
                                 <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.name_country}}</span></td>
                                 <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.location}}</span></td>
-                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.isActive}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell">
+                                    <span style="width: 110px;">
+                                        <span ng-if="item.isActive == 0" class="kt-font-danger">Không hoạt động</span>
+                                        <span ng-if="item.isActive == 1" class="kt-font-success">Hoạt động</span>
+                                    </span>
+                                </td>
                                 <td data-field="Status" class="kt-datatable__cell">
                                     <span style="width: 182px;">
                                         <span class="kt-badge  kt-badge--info kt-badge--inline kt-badge--pill">Info</span>

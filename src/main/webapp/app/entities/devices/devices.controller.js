@@ -50,10 +50,6 @@
         ];
 
         vm.lstStatus = [
-            // {
-            //     value: 1,
-            //     title: 'All'
-            // },
             {
                 value: 1,
                 title: 'Hoạt động'
@@ -62,24 +58,17 @@
                 value: 0,
                 title: 'Không hoạt động'
             }
-            // {
-            //     value: 4,
-            //     title: 'Canceled'
-            // },
-            // {
-            //     value: 5,
-            //     title: 'Success'
-            // },
-            // {
-            //     value: 6,
-            //     title: 'Info'
-            // },
-            // {
-            //     value: 7,
-            //     title: 'Danger'
-            // },
         ];
-
+        vm.lstStatus = [
+            {
+                value: 1,
+                title: 'Hoạt động'
+            },
+            {
+                value: 0,
+                title: 'Không hoạt động'
+            }
+        ];
         vm.lstDeviceGroup = [
             {
                 id: 1,

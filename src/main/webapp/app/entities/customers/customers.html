@@ -48,8 +48,8 @@
                                 </div>
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
-                                        <div class="kt-form__label">
-                                            <label>Status:</label>
+                                        <div class="kt-form__label" style="width: 20%">
+                                            <label>Trạng thái:</label>
                                         </div>
                                         <div class="kt-form__control">
                                             <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.status">
@@ -60,12 +60,12 @@
                                 </div>
                                 <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
                                     <div class="kt-form__group kt-form__group--inline">
-                                        <div class="kt-form__label">
-                                            <label>Type:</label>
+                                        <div class="kt-form__label" style="width: 20%">
+                                            <label>Người tạo:</label>
                                         </div>
                                         <div class="kt-form__control">
-                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.type">
-                                                <option value="{{item.value}}" ng-repeat="item in vm.lstType">{{item.title}}</option>
+                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.createby">
+                                                <option value="{{item.value}}" ng-repeat="item in vm.lstCreateBy">{{item.title}}</option>
                                             </select>
                                         </div>
                                     </div>
@@ -134,7 +134,12 @@
                                 </td>
                                 <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 182px;">{{item.id}}</span></td>
                                 <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.username}}</span></td>
-                                <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.isActive}}</span></td>
+                                <td data-field="ShipDate" class="kt-datatable__cell">
+                                    <span style="width: 110px;">
+                                        <span ng-if="item.isActive == 0" class="kt-font-danger">Không hoạt động</span>
+                                        <span ng-if="item.isActive == 1" class="kt-font-success">Hoạt động</span>
+                                    </span>
+                                </td>
                                 <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.create_by}}</span></td>
                                 <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.create_date}}</span></td>
 

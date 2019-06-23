@@ -12,7 +12,9 @@
 
         vm.status = '1';
         vm.type = '1';
-
+        vm.district = '';
+        vm.province = '';
+        vm.country = '';
         vm.totalItems = 175;
         vm.currentPage = 1;
 
@@ -22,62 +24,58 @@
         vm.lstStatus = [];
         vm.lstType = [];
         vm.lstData = [];
-
+        vm.lstDistrict = [];
+        vm.lstProvince = [];
+        vm.lstCountry = [];
         vm.changeCheckAllItem = changeCheckAllItem;
         vm.changeCheckedItem = changeCheckedItem;
         vm.editItem = editItem;
         vm.deleteItem = deleteItem;
         vm.addNewItem = addNewItem;
 
-        vm.lstType = [
-            {
-                value: 1,
-                title: 'All'
-            },
-            {
-                value: 2,
-                title: 'Online'
-            },
-            {
-                value: 3,
-                title: 'Retail'
-            },
-            {
-                value: 4,
-                title: 'Direct'
-            },
-        ];
-
         vm.lstStatus = [
             {
                 value: 1,
-                title: 'All'
+                title: 'Hoạt động'
             },
             {
-                value: 2,
-                title: 'Pending'
+                value: 0,
+                title: 'Không hoạt động'
+            }
+        ];
+
+        vm.lstDistrict = [
+            {
+                value: 1,
+                title: 'Huyện Hương Khế'
             },
             {
-                value: 3,
-                title: 'Delivered'
+                value: 0,
+                title: 'Huyện Hương Sơn'
+            }
+        ];
+
+        vm.lstProvince = [
+            {
+                value: 1,
+                title: 'Tỉnh Hà Tĩnh'
             },
             {
-                value: 4,
-                title: 'Canceled'
+                value: 0,
+                title: 'Tỉnh Bình Dương'
+            }
+        ];
+
+        vm.lstCountry = [
+            {
+                value: 1,
+                title: 'Việt Nam'
             },
             {
-                value: 5,
-                title: 'Success'
-            },
-            {
-                value: 6,
-                title: 'Info'
-            },
-            {
-                value: 7,
-                title: 'Danger'
-            },
-        ]
+                value: 0,
+                title: 'Đông Lào'
+            }
+        ];
 
         vm.lstData = [
             {

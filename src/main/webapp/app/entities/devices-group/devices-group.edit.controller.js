@@ -14,13 +14,25 @@
         
         vm.cancel = cancel;
         vm.update = update;
-
+        vm.status = '1';
         vm.dataItem = angular.copy(dataItem);
-
+        vm.lstStatus = [];
+        
         init();
 
-        function init(){
+        
 
+        function init(){
+            vm.lstStatus = [
+                {
+                    value: 1,
+                    title: 'Hoạt động'
+                },
+                {
+                    value: 0,
+                    title: 'Không hoạt động'
+                }
+            ];
             if(vm.dataItem == null){
                 vm.showAddNew = true;
             }else{
