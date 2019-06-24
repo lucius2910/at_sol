@@ -9,20 +9,20 @@
         <form>
             <div class="row">
                 <div class="col-md-6">
+
                     <div class="form-group">
-                        <label for="code-devices-group" class="form-control-label">Mã nhóm thiết bị:</label>
+                        <label>Mã nhóm thiết bị:</label>
                         <input type="text" class="form-control" id="code-devices-group">
                     </div>
-                    <div class="form-group">
-                        <div class="kt-form__group kt-form__group--inline">
-                            <div class="kt-form__label">
-                                <label>Trạng thái:</label>
-                            </div>
-                            <div class="kt-form__control">
-                                <select class="form-control bootstrap-select" id="" ng-model="vm.status">
-                                    <option value="{{item.value}}" ng-repeat="item in vm.lstStatus">{{item.title}}</option>
-                                </select>
-                            </div>
+
+                    <div class="kt-form__group kt-form__group--inline">
+                        <div class="kt-form__label">
+                            <label>Trạng thái:</label>
+                        </div>
+                        <div class="kt-form__control">
+                            <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.status">
+                                <option value="{{item.value}}" ng-repeat="item in vm.lstStatus">{{item.title}}</option>
+                            </select>
                         </div>
                     </div>
                 </div>
