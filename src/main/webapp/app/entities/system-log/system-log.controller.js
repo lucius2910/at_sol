@@ -101,7 +101,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/system-log/system-log.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'SystemLogEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -116,7 +116,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/system-log/system-log.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'SystemLogEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -131,7 +131,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/system-log/system-log.delete.html',
-                controller: 'DeviceDeleteController',
+                controller: 'SystemLogDeleteController',
                 controllerAs: 'vm',
                 size: 'md',
                 resolve: {

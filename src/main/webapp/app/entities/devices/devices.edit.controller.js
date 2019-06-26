@@ -15,10 +15,17 @@
         vm.cancel = cancel;
         vm.update = update; 
         vm.dataItem = angular.copy(dataItem);
-        vm.status = 1;
+        
         vm.lstStatus = [];
         vm.lstDeviceGroup = [];
         vm.lstDeviceType = [];
+        vm.deviceInfo = {}
+
+        vm.deviceInfo = {
+            status: '1',
+            group: '1',
+            type: '1'
+        }
 
         vm.lstStatus = [
             {
@@ -73,7 +80,7 @@
         }
 
         $(function () {
-            angular.element('#kt_form_type').selectpicker();
+            angular.element('#kt_form_type, #kt_form_status, #kt_form_group').selectpicker();
         });
     }
 })();

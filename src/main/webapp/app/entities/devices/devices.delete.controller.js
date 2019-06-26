@@ -15,6 +15,12 @@
         vm.cancel = cancel;
         vm.deleteItem = deleteItem;
 
+        init();
+
+        function init(){
+            console.log('init delete devices');
+        }
+
         function deleteItem(){
             $uibModalInstance.close();
         }

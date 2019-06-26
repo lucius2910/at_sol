@@ -125,7 +125,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/devices-group/devices-group.delete.html',
-                controller: 'DeviceDeleteController',
+                controller: 'DeviceGroupDeleteController',
                 controllerAs: 'vm',
                 size: 'md',
                 resolve: {

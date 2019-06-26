@@ -163,7 +163,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/areas/areas.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'AreaEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -178,7 +178,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/areas/areas.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'AreaEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -193,7 +193,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/areas/areas.delete.html',
-                controller: 'DeviceDeleteController',
+                controller: 'AreasDeleteController',
                 controllerAs: 'vm',
                 size: 'md',
                 resolve: {

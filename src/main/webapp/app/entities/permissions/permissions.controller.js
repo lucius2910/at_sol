@@ -146,7 +146,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/permissions/permissions.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'PermissionEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -161,7 +161,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/permissions/permissions.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'PermissionEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -176,7 +176,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/permissions/permissions.delete.html',
-                controller: 'DeviceDeleteController',
+                controller: 'PermissionDeleteController',
                 controllerAs: 'vm',
                 size: 'md',
                 resolve: {

@@ -3,11 +3,11 @@
 
     angular
         .module('atSolApp')
-        .controller('DeviceEditController', DeviceEditController);
+        .controller('PermissionEditController', PermissionEditController);
 
-    DeviceEditController.$inject = ['$scope', '$uibModalInstance', 'dataItem'];
+    PermissionEditController.$inject = ['$scope', '$uibModalInstance', 'dataItem'];
 
-    function DeviceEditController ($scope, $uibModalInstance, dataItem) {
+    function PermissionEditController ($scope, $uibModalInstance, dataItem) {
         var vm = this;
 
         vm.showAddNew = false;

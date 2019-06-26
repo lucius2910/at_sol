@@ -3,11 +3,11 @@
 
     angular
         .module('atSolApp')
-        .controller('DeviceDeleteController', DeviceDeleteController);
+        .controller('AreasDeleteController', AreasDeleteController);
 
-    DeviceDeleteController.$inject = ['$scope', '$uibModalInstance', 'dataItem'];
+    AreasDeleteController.$inject = ['$scope', '$uibModalInstance', 'dataItem'];
 
-    function DeviceDeleteController ($scope, $uibModalInstance, dataItem) {
+    function AreasDeleteController ($scope, $uibModalInstance, dataItem) {
         var vm = this;
         
         vm.dataItem = dataItem;

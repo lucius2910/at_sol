@@ -101,7 +101,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/customers/customers.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'CustomerEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -116,7 +116,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/customers/customers.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'CustomerEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -131,7 +131,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/customers/customers.delete.html',
-                controller: 'DeviceDeleteController',
+                controller: 'CustomersDeleteController',
                 controllerAs: 'vm',
                 size: 'md',
                 resolve: {

@@ -146,7 +146,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/roles/roles.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'RoleEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -161,7 +161,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/roles/roles.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'RoleEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {
@@ -176,7 +176,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/roles/roles.delete.html',
-                controller: 'DeviceDeleteController',
+                controller: 'RoleDeleteController',
                 controllerAs: 'vm',
                 size: 'md',
                 resolve: {
