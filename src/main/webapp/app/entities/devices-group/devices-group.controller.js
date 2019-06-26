@@ -110,7 +110,7 @@
             $uibModal.open({
                 animation: true,
                 templateUrl: 'app/entities/devices-group/devices-group.edit.html',
-                controller: 'DeviceEditController',
+                controller: 'DeviceGroupEditController',
                 controllerAs: 'vm',
                 size: 'xl',
                 resolve: {

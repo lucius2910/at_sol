@@ -59,16 +59,6 @@
                 title: 'Không hoạt động'
             }
         ];
-        vm.lstStatus = [
-            {
-                value: 1,
-                title: 'Hoạt động'
-            },
-            {
-                value: 0,
-                title: 'Không hoạt động'
-            }
-        ];
         vm.lstDeviceGroup = [
             {
                 id: 1,

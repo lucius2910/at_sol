@@ -11,7 +11,6 @@
         var vm = this;
 
         vm.showAddNew = false;
-        
         vm.cancel = cancel;
         vm.update = update;
         vm.status = '1';
