@@ -16,6 +16,19 @@
         vm.update = update;
 
         vm.dataItem = angular.copy(dataItem);
+        vm.customer = {
+            status: '1'
+        }
+        vm.lstStatus = [
+            {
+                value: 1,
+                title: 'Hoạt động'
+            },
+            {
+                value: 0,
+                title: 'Không hoạt động'
+            }
+        ];
 
         init();
 

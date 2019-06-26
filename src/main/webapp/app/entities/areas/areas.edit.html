@@ -14,26 +14,45 @@
                         <input type="text" class="form-control" id="recipient-name">
                     </div>
                     <div class="form-group">
+                        <div class="kt-form__label">
+                            <label>Huyện:</label>
+                        </div>
+                        <div class="kt-form__control">
+                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.district">
+                                <option value="{{item.value}}" ng-repeat="item in vm.lstDistrict">{{item.title}}</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-group">
                         <label for="message-text" class="form-control-label">Tên khu vực:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
+                        <input type="text" class="form-control" id="user-name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="kt-form__label">
+                            <label>Tỉnh:</label>
+                        </div>
+                        <div class="kt-form__control">
+                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.province">
+                                <option value="{{item.value}}" ng-repeat="item in vm.lstProvince">{{item.title}}</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="form-control-label">Huyện:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="message-text" class="form-control-label">Tỉnh:</label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label for="recipient-name" class="form-control-label">Quốc gia:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <div class="kt-form__label">
+                            <label>Quốc gia:</label>
+                        </div>
+                        <div class="kt-form__control">
+                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.country">
+                                <option value="{{item.value}}" ng-repeat="item in vm.lstCountry">{{item.title}}</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
                         <label for="message-text" class="form-control-label">Vị trí:</label>
@@ -43,8 +62,18 @@
 
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label for="recipient-name" class="form-control-label">Trạng thái:</label>
-                        <input type="text" class="form-control" id="recipient-name">
+                        <div class="kt-form__label" style="width: 20%">
+                            <label>Trạng thái:</label>
+                        </div>
+                        <div class="kt-form__control">
+                            <div class="kt-radio-list">
+                                <label ng-repeat="item in vm.lstStatus" class="kt-radio">
+                                    <input type="radio" name="radio_status"> {{item.title}}
+                                    <span></span>
+                                </label>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

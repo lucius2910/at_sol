@@ -15,14 +15,18 @@
                         <input type="text" class="form-control" id="code-devices-group">
                     </div>
 
-                    <div class="kt-form__group kt-form__group--inline">
-                        <div class="kt-form__label">
+                    <div class="form-group">
+                        <div class="kt-form__label" style="width: 20%">
                             <label>Trạng thái:</label>
                         </div>
                         <div class="kt-form__control">
-                            <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.status">
-                                <option value="{{item.value}}" ng-repeat="item in vm.lstStatus">{{item.title}}</option>
-                            </select>
+                            <div class="kt-radio-list">
+                                <label ng-repeat="item in vm.lstStatus" class="kt-radio">
+                                    <input type="radio" name="radio_status"> {{item.title}}
+                                    <span></span>
+                                </label>
+                                
+                            </div>
                         </div>
                     </div>
                 </div>

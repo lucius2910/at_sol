@@ -16,7 +16,49 @@
         vm.update = update;
 
         vm.dataItem = angular.copy(dataItem);
+        vm.lstStatus = [
+            {
+                value: 1,
+                title: 'Hoạt động'
+            },
+            {
+                value: 0,
+                title: 'Không hoạt động'
+            }
+        ];
 
+        vm.lstDistrict = [
+            {
+                value: 1,
+                title: 'Huyện Hương Khế'
+            },
+            {
+                value: 0,
+                title: 'Huyện Hương Sơn'
+            }
+        ];
+
+        vm.lstProvince = [
+            {
+                value: 1,
+                title: 'Tỉnh Hà Tĩnh'
+            },
+            {
+                value: 0,
+                title: 'Tỉnh Bình Dương'
+            }
+        ];
+
+        vm.lstCountry = [
+            {
+                value: 1,
+                title: 'Việt Nam'
+            },
+            {
+                value: 0,
+                title: 'Đông Lào'
+            }
+        ];
         init();
 
         function init(){
@@ -35,5 +77,8 @@
         function cancel(){
             $uibModalInstance.dismiss('cancel');
         }
+        $(function () {
+            angular.element('#kt_form_status,#kt_form_type').selectpicker();
+        });
     }
 })();
