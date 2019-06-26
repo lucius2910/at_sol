@@ -10,13 +10,13 @@
     function DevicesController ($scope, $uibModal, $state) {
         var vm = this;
 
-        vm.status = '1';
-        vm.type = '1';
         vm.checkedAllItem = false;
         vm.deleteManyItem = false;
 
         vm.totalItems = 175;
         vm.currentPage = 1;
+        vm.status = '1';
+        vm.type = '1';
 
         vm.lstStatus = [];
         vm.lstDeviceGroup = [];
@@ -59,6 +59,7 @@
                 title: 'Không hoạt động'
             }
         ];
+        
         vm.lstDeviceGroup = [
             {
                 id: 1,
