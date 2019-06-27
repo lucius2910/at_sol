@@ -68,6 +68,30 @@ function ngconstant_dev() {
                         value: '0',
                         title: 'Loại 2'
                     },
+                ],
+                USER_STATUS: [
+                    {
+                        value: '1',
+                        title: 'Active'
+                    },
+                    {
+                        value: '0',
+                        title: 'DeActive'
+                    },
+                ],
+                USER_STATUS_SEARCH: [
+                    {
+                        value: 'all',
+                        title: 'Tất cả'
+                    },
+                    {
+                        value: '1',
+                        title: 'Active'
+                    },
+                    {
+                        value: '0',
+                        title: 'DeActive'
+                    }
                 ]
             }
             

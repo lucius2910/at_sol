@@ -6,5 +6,79 @@
         .constant('VERSION', "0.0.1-SNAPSHOT")
         .constant('DEBUG_INFO_ENABLED', true)
         .constant('BUILD_TIMESTAMP', "")
+        .constant('APP_CONSTANTS', {
+	"DEVICE_STATUS": [
+		{
+			"value": "1",
+			"title": "Hoạt động"
+		},
+		{
+			"value": "0",
+			"title": "Không hoạt động"
+		}
+	],
+	"DEVICE_STATUS_SEARCH": [
+		{
+			"value": "all",
+			"title": "Tất cả"
+		},
+		{
+			"value": "1",
+			"title": "Hoạt động"
+		},
+		{
+			"value": "0",
+			"title": "Không hoạt động"
+		}
+	],
+	"DEVICE_TYPE": [
+		{
+			"value": "1",
+			"title": "Loại 1"
+		},
+		{
+			"value": "0",
+			"title": "Loại 2"
+		}
+	],
+	"DEVICE_TYPE_SEARCH": [
+		{
+			"value": "all",
+			"title": "Tất cả"
+		},
+		{
+			"value": "1",
+			"title": "Loại 1"
+		},
+		{
+			"value": "0",
+			"title": "Loại 2"
+		}
+	],
+	"USER_STATUS": [
+		{
+			"value": "1",
+			"title": "Active"
+		},
+		{
+			"value": "0",
+			"title": "DeActive"
+		}
+	],
+	"USER_STATUS_SEARCH": [
+		{
+			"value": "all",
+			"title": "Tất cả"
+		},
+		{
+			"value": "1",
+			"title": "Active"
+		},
+		{
+			"value": "0",
+			"title": "DeActive"
+		}
+	]
+})
 ;
 })();

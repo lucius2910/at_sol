@@ -3,9 +3,6 @@
         <div class="kt-portlet kt-portlet--mobile">
             <div class="kt-portlet__head kt-portlet__head--lg">
                 <div class="kt-portlet__head-label">
-                    <span class="kt-portlet__head-icon">
-                        <i class="kt-font-brand flaticon2-line-chart"></i>
-                    </span>
                     <h3 class="kt-portlet__head-title">
                         Danh sách khách hàng
                     </h3>
@@ -37,47 +34,46 @@
                 <div class="kt-form kt-form--label-right kt-margin-t-20 kt-margin-b-10">
                     <div class="row align-items-center">
                         <div class="col-xl-12 order-2 order-xl-1">
-                            <div class="row align-items-center">
-                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
-                                    <div class="kt-input-icon kt-input-icon--left">
-                                        <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
-                                        <span class="kt-input-icon__icon kt-input-icon__icon--left">
-                                            <span><i class="la la-search"></i></span>
-                                        </span>
+                            <div class="row">
+
+                                <div class="col-md-3">
+                                    <div class="kt-form__group">
+                                        <div class="kt-form__label">
+                                            <label>Search:</label>
+                                        </div>
+                                        <div class="kt-input-icon kt-input-icon--left">
+                                            <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
+                                            <span class="kt-input-icon__icon kt-input-icon__icon--left">
+                                                <span><i class="la la-search"></i></span>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
-                                    <div class="kt-form__group kt-form__group--inline">
-                                        <div class="kt-form__label" style="width: 20%">
+
+                                <div class="col-md-3">
+                                    <div class="kt-form__group">
+                                        <div class="kt-form__label">
                                             <label>Trạng thái:</label>
                                         </div>
                                         <div class="kt-form__control">
-                                            <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.status">
+                                            <select class="form-control bootstrap-select" id="kt_form_status" ng-model="vm.searchData.status">
                                                 <option value="{{item.value}}" ng-repeat="item in vm.lstStatus">{{item.title}}</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
-                                    <div class="kt-form__group kt-form__group--inline">
-                                        <div class="kt-form__label" style="width: 20%">
-                                            <label>Người tạo:</label>
+
+                                <div class="col-md-3">
+                                    <div class="kt-form__group">
+                                        <div class="kt-form__control kt-form__control_btn">
+                                            <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="la la-search"></i> 
+                                                Search
+                                            </button>
                                         </div>
-                                        <div class="kt-form__control">
-                                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.createby">
-                                                <option value="{{item.value}}" ng-repeat="item in vm.lstCreateBy">{{item.title}}</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="col-md-3 kt-margin-b-20-tablet-and-mobile">
-                                    <div class="kt-form__group kt-form__group--inline">
-                                        <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="la la-search"></i> 
-                                            Search
-                                        </button>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -91,7 +87,7 @@
             <!-- ----------------------------------------------------------------------------------------- -->
             <div class="kt-portlet__body kt-portlet__body--fit">
                 <div class="kt-datatable kt-datatable--default kt-datatable--brand kt-datatable--loaded" id="local_data" >
-                    <table class="kt-datatable__table" style="display: block; min-height: 300px;">
+                    <table id="perfectScrollTable" class="kt-datatable__table" style="display: block; min-height: 300px;">
                         <thead class="kt-datatable__head">
                             <tr class="kt-datatable__row" style="left: 0px;">
                                 <th data-field="RecordID" class="kt-datatable__cell--center kt-datatable__cell kt-datatable__cell--check">
@@ -102,19 +98,19 @@
                                     </span>
                                 </th>
                                 <th data-field="ID" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">ID</span>
+                                    <span style="width: 150px;">ID</span>
                                 </th>
                                 <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Username</span>
-                                </th>
-                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Trạng thái</span>
+                                    <span style="width: 150px;">Username</span>
                                 </th>
                                 <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Người tạo</span>
+                                    <span style="width: 150px;">Người tạo</span>
                                 </th>
                                 <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Ngày tạo</span>
+                                    <span style="width: 150px;">Ngày tạo</span>
+                                </th>
+                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 150px;">Trạng thái</span>
                                 </th>
                                 <th data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
                                     <span style="width: 110px;">Actions</span>
@@ -132,17 +128,16 @@
                                         </label>
                                     </span>
                                 </td>
-                                <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 182px;">{{item.id}}</span></td>
-                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.username}}</span></td>
+                                <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 150px;">{{item.id}}</span></td>
+                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 150px;">{{item.username}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 150px;">{{item.create_by}}</span></td>
+                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 150px;">{{item.create_date}}</span></td>
                                 <td data-field="ShipDate" class="kt-datatable__cell">
-                                    <span style="width: 110px;">
+                                    <span style="width: 150px;">
                                         <span ng-if="item.isActive == 0" class="kt-font-danger">Không hoạt động</span>
                                         <span ng-if="item.isActive == 1" class="kt-font-success">Hoạt động</span>
                                     </span>
                                 </td>
-                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.create_by}}</span></td>
-                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.create_date}}</span></td>
-
                                 <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
                                     <span style="overflow: visible; position: relative; width: 110px;">
                                         <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.editItem(item)">

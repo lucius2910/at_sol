@@ -5,14 +5,10 @@
         .module('atSolApp')
         .controller('CustomersController', CustomersController);
 
-    CustomersController.$inject = ['$scope', '$uibModal', '$state'];
+    CustomersController.$inject = ['$scope', '$uibModal', '$state', 'APP_CONSTANTS'];
 
-    function CustomersController ($scope, $uibModal, $state) {
+    function CustomersController ($scope, $uibModal, $state, APP_CONSTANTS) {
         var vm = this;
-
-        vm.status = '1';
-        vm.createby = '';
-        vm.type = '1';
 
         vm.totalItems = 175;
         vm.currentPage = 1;
@@ -24,33 +20,18 @@
         vm.lstType = [];
         vm.lstData = [];
         vm.lstCreateBy = [];
+
+        vm.searchData = {
+            status: 'all'
+        }
+
         vm.changeCheckAllItem = changeCheckAllItem;
         vm.changeCheckedItem = changeCheckedItem;
         vm.editItem = editItem;
         vm.deleteItem = deleteItem;
         vm.addNewItem = addNewItem;
 
-        vm.lstStatus = [
-            {
-                value: 1,
-                title: 'Hoạt động'
-            },
-            {
-                value: 0,
-                title: 'Không hoạt động'
-            }
-        ];
-
-        vm.lstCreateBy = [
-            {
-                value: 1,
-                title: 'Admin'
-            },
-            {
-                value: 0,
-                title: 'Admin 1'
-            }
-        ];
+        vm.lstStatus = angular.copy(APP_CONSTANTS.USER_STATUS_SEARCH);
 
         vm.lstData = [
             {
@@ -170,6 +151,7 @@
 
         $(function () {
             angular.element('#kt_form_status,#kt_form_type').selectpicker();
+            const ps = new PerfectScrollbar('#perfectScrollTable');
         });
         
     }

@@ -47,6 +47,10 @@
     .ats-paging li:not(.pagination-page) a {
       font-size: 20px; }
 
+.kt-form__control_btn {
+  position: absolute;
+  bottom: 0; }
+
 #perfectScrollTable {
   position: relative; }
   #perfectScrollTable .ps__rail-x {

@@ -10,70 +10,23 @@
     function RolesController ($scope, $uibModal, $state) {
         var vm = this;
 
-        vm.status = '1';
-        vm.type = '1';
+        vm.totalItems = 175;
+        vm.currentPage = 1;
+
         vm.checkedAllItem = false;
         vm.deleteManyItem = false;
 
-        vm.lstStatus = [];
-        vm.lstType = [];
         vm.lstData = [];
+        vm.searchData = {
+            status: 'all',
+            type: 'all'
+        }
 
         vm.changeCheckAllItem = changeCheckAllItem;
         vm.changeCheckedItem = changeCheckedItem;
         vm.editItem = editItem;
         vm.deleteItem = deleteItem;
         vm.addNewItem = addNewItem;
-
-        vm.lstType = [
-            {
-                value: 1,
-                title: 'All'
-            },
-            {
-                value: 2,
-                title: 'Online'
-            },
-            {
-                value: 3,
-                title: 'Retail'
-            },
-            {
-                value: 4,
-                title: 'Direct'
-            },
-        ];
-
-        vm.lstStatus = [
-            {
-                value: 1,
-                title: 'All'
-            },
-            {
-                value: 2,
-                title: 'Pending'
-            },
-            {
-                value: 3,
-                title: 'Delivered'
-            },
-            {
-                value: 4,
-                title: 'Canceled'
-            },
-            {
-                value: 5,
-                title: 'Success'
-            },
-            {
-                value: 6,
-                title: 'Info'
-            },
-            {
-                value: 7,
-                title: 'Danger'
-            },
-        ]
 
         vm.lstData = [
             {
@@ -215,6 +168,7 @@
 
         $(function () {
             angular.element('#kt_form_status,#kt_form_type').selectpicker();
+            const ps = new PerfectScrollbar('#perfectScrollTable');
         });
         
     }
