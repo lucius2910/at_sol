@@ -46,3 +46,9 @@
     color: #000; }
     .ats-paging li:not(.pagination-page) a {
       font-size: 20px; }
+
+#perfectScrollTable {
+  position: relative; }
+  #perfectScrollTable .ps__rail-x {
+    position: absolute;
+    bottom: 0px; }

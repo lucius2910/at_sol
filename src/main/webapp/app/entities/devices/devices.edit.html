@@ -26,36 +26,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="note" class="form-control-label">Ghi chú:</label>
-                        <textarea class="form-control" id="note"></textarea>
-                    </div>
-                </div>
-
-                <div class="col-md-6 kt-margin-b-20-tablet-and-mobile">
-
-                    <div class="form-group">
-                        <div class="kt-form__label" style="width: 25%">
-                            <label>Nhóm thiết bị:</label>
-                        </div>
-                        <div class="kt-form__control">
-                            <select class="form-control bootstrap-select" id="kt_form_group" ng-model="vm.deviceInfo.group">
-                                <option value="{{item.id}}" ng-repeat="item in vm.lstDeviceGroup">{{item.name}}</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="kt-form__label" style="width: 25%">
-                            <label>Loại thiết bị:</label>
-                        </div>
-                        <div class="kt-form__control">
-                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.deviceInfo.type">
-                                <option value="{{item.id}}" ng-repeat="item in vm.lstDeviceType">{{item.name}}</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
                         <div class="kt-form__label" style="width: 20%">
                             <label>Trạng thái:</label>
                         </div>
@@ -68,6 +38,37 @@
                                 
                             </div>
                         </div>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 kt-margin-b-20-tablet-and-mobile">
+
+                    <div class="form-group">
+                        <div class="kt-form__label" style="width: 25%">
+                            <label>Nhóm thiết bị:</label>
+                        </div>
+                        <div class="kt-form__control">
+                            <select class="form-control bootstrap-select" id="kt_form_group" ng-model="vm.deviceInfo.group">
+                                <option value="{{item.value}}" ng-repeat="item in vm.lstDeviceGroup">{{item.title}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="kt-form__label" style="width: 25%">
+                            <label>Loại thiết bị:</label>
+                        </div>
+                        <div class="kt-form__control">
+                            <select class="form-control bootstrap-select" id="kt_form_type" ng-model="vm.deviceInfo.type">
+                                <option value="{{item.value}}" ng-repeat="item in vm.lstDeviceType">{{item.title}}</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="note" class="form-control-label">Ghi chú:</label>
+                        <textarea class="form-control" id="note" rows="5"></textarea>
                     </div>
             </div>
         </form>

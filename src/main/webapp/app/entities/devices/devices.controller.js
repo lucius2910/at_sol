@@ -5,18 +5,16 @@
         .module('atSolApp')
         .controller('DevicesController', DevicesController);
 
-    DevicesController.$inject = ['$scope', '$uibModal', '$state'];
+    DevicesController.$inject = ['$scope', '$uibModal', '$state', 'APP_CONSTANTS', 'DeviceServices', 'DeviceGroupServices'];
 
-    function DevicesController ($scope, $uibModal, $state) {
+    function DevicesController ($scope, $uibModal, $state, APP_CONSTANTS, DeviceServices, DeviceGroupServices) {
         var vm = this;
 
         vm.checkedAllItem = false;
         vm.deleteManyItem = false;
 
         vm.totalItems = 175;
-        vm.currentPage = 1;
-        vm.status = '1';
-        vm.type = '1';
+        
 
         vm.lstStatus = [];
         vm.lstDeviceGroup = [];
@@ -24,63 +22,23 @@
         vm.lstType = [];
         vm.lstData = [];
 
+        vm.searchData = {
+            currentPage: 1,
+            status: 'all',
+            type: 'all',
+            group: 'all'
+        }
+
         vm.changeCheckAllItem = changeCheckAllItem;
         vm.changeCheckedItem = changeCheckedItem;
         vm.editItem = editItem;
         vm.deleteItem = deleteItem;
         vm.addNewItem = addNewItem;
 
-        vm.lstType = [
-            {
-                value: 1,
-                title: 'All'
-            },
-            {
-                value: 2,
-                title: 'Online'
-            },
-            {
-                value: 3,
-                title: 'Retail'
-            },
-            {
-                value: 4,
-                title: 'Direct'
-            },
-        ];
+        vm.lstStatus = angular.copy(APP_CONSTANTS.DEVICE_STATUS_SEARCH);
+        vm.lstDeviceGroup = angular.copy(APP_CONSTANTS.DEVICE_GROUP_SEARCH);
+        vm.lstDeviceType = angular.copy(APP_CONSTANTS.DEVICE_TYPE_SEARCH);
 
-        vm.lstStatus = [
-            {
-                value: 1,
-                title: 'Hoạt động'
-            },
-            {
-                value: 0,
-                title: 'Không hoạt động'
-            }
-        ];
-        
-        vm.lstDeviceGroup = [
-            {
-                id: 1,
-                name: 'Nhóm 1'
-            },
-            {
-                id: 0,
-                name: 'Nhóm 2'
-            }
-        ];
-
-        vm.lstDeviceType = [
-            {
-                id: 1,
-                name: 'Loại 1'
-            },
-            {
-                id: 0,
-                name: 'Loại 2'
-            }
-        ];
 
         vm.lstData = [
             {
@@ -144,6 +102,38 @@
                 isActive: 1
             }
         ];
+
+        init()
+
+        function init(){
+            console.log('init device controller');
+            getDeviceGroup();
+        }
+
+        function getDeviceGroup(){
+            // DeviceGroupServices.get(function(response){
+            //     console.log('get device group', response)
+            // }, function(error){
+            //     console.log('get deivce group', error);
+            // });
+
+            vm.lstDeviceGroup = [
+                {
+                    title: 'Group 1',
+                    value: '1'
+                },
+                {
+                    title: 'Group 2',
+                    value: '2'
+                }
+            ]
+
+            // Add select all option to search
+            vm.lstDeviceGroup.unshift({
+                title: 'Tất cả',
+                value: 'all'
+            })
+        }
 
         function editItem(item){
             $uibModal.open({
@@ -218,6 +208,8 @@
 
         $(function () {
             angular.element('#kt_form_status,#kt_form_type').selectpicker();
+
+            const ps = new PerfectScrollbar('#perfectScrollTable');
         });
         
     }

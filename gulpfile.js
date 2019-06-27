@@ -10,8 +10,6 @@ var gulp = require('gulp'),
     templateCache = require('gulp-angular-templatecache'),
     htmlmin = require('gulp-htmlmin'),
     imagemin = require('gulp-imagemin'),
-    ngConstant = require('gulp-ng-constant'),
-    rename = require('gulp-rename'),
     eslint = require('gulp-eslint'),
     del = require('del'),
     runSequence = require('run-sequence'),
@@ -27,7 +25,9 @@ var handleErrors = require('./gulp/handle-errors'),
     util = require('./gulp/utils'),
     copy = require('./gulp/copy'),
     inject = require('./gulp/inject'),
-    build = require('./gulp/build');
+    build = require('./gulp/build'),
+    constant = require('./gulp/constant');
+
 
 var config = require('./gulp/config');
 
@@ -50,6 +50,10 @@ gulp.task('copy:swagger', copy.swagger);
 gulp.task('copy:images', copy.images);
 
 gulp.task('copy:assets', copy.assets);
+
+gulp.task('constant:ngconstant_dev', constant.ngconstant_dev);
+
+gulp.task('constant:ngconstant_prod', constant.ngconstant_prod);
 
 
 gulp.task('images', function () {
@@ -113,37 +117,6 @@ gulp.task('html', function () {
         }))
         .pipe(gulp.dest(config.tmp));
 });
-
-gulp.task('ngconstant:dev', function () {
-    return ngConstant({
-        name: 'atSolApp',
-        constants: {
-            VERSION: util.parseVersion(),
-            DEBUG_INFO_ENABLED: true,
-            BUILD_TIMESTAMP: ''
-        },
-        template: config.constantTemplate,
-        stream: true
-    })
-    .pipe(rename('app.constants.js'))
-    .pipe(gulp.dest(config.app + 'app/'));
-});
-
-gulp.task('ngconstant:prod', function () {
-    return ngConstant({
-        name: 'atSolApp',
-        constants: {
-            VERSION: util.parseVersion(),
-            DEBUG_INFO_ENABLED: false,
-            BUILD_TIMESTAMP: new Date().getTime()
-        },
-        template: config.constantTemplate,
-        stream: true
-    })
-    .pipe(rename('app.constants.js'))
-    .pipe(gulp.dest(config.app + 'app/'));
-});
-
 // check app for eslint errors
 gulp.task('eslint', function () {
     return gulp.src(['gulpfile.js', config.app + 'app/**/*.js'])
@@ -164,7 +137,7 @@ gulp.task('eslint:fix', function () {
         .pipe(gulpIf(util.isLintFixed, gulp.dest(config.app + 'app')));
 });
 
-gulp.task('test', ['inject:test', 'ngconstant:dev'], function (done) {
+gulp.task('test', ['inject:test', 'constant:ngconstant_dev'], function (done) {
     new KarmaServer({
         configFile: __dirname + '/' + config.test + 'karma.conf.js',
         singleRun: true
@@ -174,7 +147,7 @@ gulp.task('test', ['inject:test', 'ngconstant:dev'], function (done) {
 
 gulp.task('watch', function () {
     gulp.watch('bower.json', ['install']);
-    gulp.watch(['gulpfile.js', 'build.gradle'], ['ngconstant:dev']);
+    gulp.watch(['gulpfile.js', 'build.gradle'], ['constant:ngconstant_dev']);
     gulp.watch(config.sassSrc, ['styles']);
     gulp.watch(config.app + 'content/images/**', ['images']);
     gulp.watch(config.app + 'app/**/*.js', ['inject:app']);
@@ -182,13 +155,13 @@ gulp.task('watch', function () {
 });
 
 gulp.task('install', function () {
-    runSequence(['inject:dep', 'ngconstant:dev'], 'sass', 'copy:languages', 'inject:app', 'inject:troubleshoot');
+    runSequence(['inject:dep', 'constant:ngconstant_dev'], 'sass', 'copy:languages', 'inject:app', 'inject:troubleshoot');
 });
 
 gulp.task('serve', ['install'], serve);
 
 gulp.task('build', ['clean'], function (cb) {
-    runSequence(['copy', 'inject:vendor', 'ngconstant:prod', 'copy:languages'], 'inject:app', 'inject:troubleshoot', 'assets:prod', 'bundle-sw');
+    runSequence(['copy', 'inject:vendor', 'constant:ngconstant_prod', 'copy:languages'], 'inject:app', 'inject:troubleshoot', 'assets:prod', 'bundle-sw');
 });
 
 gulp.task('default', ['serve']);

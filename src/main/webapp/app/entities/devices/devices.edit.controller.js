@@ -5,9 +5,9 @@
         .module('atSolApp')
         .controller('DeviceEditController', DeviceEditController);
 
-    DeviceEditController.$inject = ['$scope', '$uibModalInstance', 'dataItem'];
+    DeviceEditController.$inject = ['$scope', '$uibModalInstance', 'dataItem', 'APP_CONSTANTS', 'DeviceGroupServices'];
 
-    function DeviceEditController ($scope, $uibModalInstance, dataItem) {
+    function DeviceEditController ($scope, $uibModalInstance, dataItem, APP_CONSTANTS, DeviceGroupServices) {
         var vm = this;
 
         vm.showAddNew = false;
@@ -27,48 +27,40 @@
             type: '1'
         }
 
-        vm.lstStatus = [
-            {
-                value: 1,
-                title: 'Hoạt động'
-            },
-            {
-                value: 0,
-                title: 'Không hoạt động'
-            }
-        ];
-
-        vm.lstDeviceGroup = [
-            {
-                id: 1,
-                name: 'Nhóm 1'
-            },
-            {
-                id: 0,
-                name: 'Nhóm 2'
-            }
-        ];
-
-        vm.lstDeviceType = [
-            {
-                id: 1,
-                name: 'Loại 1'
-            },
-            {
-                id: 0,
-                name: 'Loại 2'
-            }
-        ];
+        vm.lstStatus = angular.copy(APP_CONSTANTS.DEVICE_STATUS);
+        vm.lstDeviceType = angular.copy(APP_CONSTANTS.DEVICE_TYPE);
 
         init();
 
         function init(){
             console.log('init device.edit.controller');
+
             if(vm.dataItem == null){
                 vm.showAddNew = true;
             }else{
                 vm.showAddNew = false;
             }
+
+            getDeviceGroup();
+        }
+
+        function getDeviceGroup(){
+            // DeviceGroupServices.get(function(response){
+            //     console.log('get device group', response)
+            // }, function(error){
+            //     console.log('get deivce group', error);
+            // });
+
+            vm.lstDeviceGroup = [
+                {
+                    title: 'Group 1',
+                    value: '1'
+                },
+                {
+                    title: 'Group 2',
+                    value: '2'
+                }
+            ]
         }
 
         function update(){
