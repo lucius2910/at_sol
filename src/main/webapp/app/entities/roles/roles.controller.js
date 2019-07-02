@@ -17,6 +17,18 @@
         vm.deleteManyItem = false;
 
         vm.lstData = [];
+
+        vm.lstStatus = [
+            {
+                title: 'Hoạt động',
+                value: '1',
+            },
+            {
+                title: 'Không hoạt động',
+                value: '0'
+            }
+        ];
+
         vm.searchData = {
             status: 'all',
             type: 'all'
@@ -27,73 +39,37 @@
         vm.editItem = editItem;
         vm.deleteItem = deleteItem;
         vm.addNewItem = addNewItem;
+        vm.configItem = configItem;
 
         vm.lstData = [
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'ROLE_ADMIN',
+                name: 'ROLE ADMIN',
+                description: 'Role for admin user',
+                status: '1'
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'ROLE_MAN',
+                name: 'ROLE MANAGER',
+                description: 'Role for manager user',
+                status: '2'
             },
             {
                 id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
-            },
-            {
-                id: '49288-0815',
-                country: 'Paraguay PY',
-                shipDate: '4/23/2016',
-                companyName: 'Cartwright, Hilpert and Hartmann',
-                status: 2,
-                type: 2
+                code: 'ROLE_CUSTOMER',
+                name: 'ROLE CUSTOMER',
+                description: 'Role for customer user',
+                status: '1'
             }
         ];
+
+        init()
+
+        function init(){
+            console.log('init role controller');
+        }
 
         function editItem(item){
             $uibModal.open({
@@ -140,6 +116,21 @@
             });
         }
 
+        function configItem(item){
+            $uibModal.open({
+                animation: true,
+                templateUrl: 'app/entities/roles/roles.config.html',
+                controller: 'RoleConfigController',
+                controllerAs: 'vm',
+                size: 'md',
+                resolve: {
+                  dataItem: function () {
+                    return item;
+                  }
+                }
+            });
+        }
+
         function changeCheckAllItem(){
             angular.forEach(vm.lstData, function(element){
                 element.checked = vm.checkedAllItem
@@ -170,6 +161,5 @@
             angular.element('#kt_form_status,#kt_form_type').selectpicker();
             const ps = new PerfectScrollbar('#perfectScrollTable');
         });
-        
     }
 })();

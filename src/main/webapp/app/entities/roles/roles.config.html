@@ -1,0 +1,21 @@
+
+<div class="modal-content">
+    <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Config roles</h5>
+        <button type="button" class="close" ng-click="vm.cancel()">
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="role_tree" class="tree-demo">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-if="!vm.showAddNew" ng-click="vm.update()"> <i class="la la-save"></i>Update</button>
+        <button type="button" class="btn btn-primary" ng-if="vm.showAddNew"> <i class="la la-plus"></i>Add new</button>
+        <button type="button" class="btn btn-secondary" ng-click="vm.cancel()"><i class="la la-ban"></i>Close</button>
+    </div>
+</div>

@@ -108,6 +108,20 @@
         function init(){
             console.log('init device controller');
             getDeviceGroup();
+            searchDevices();
+        }
+
+        function searchDevices(){
+            DeviceServices.get(
+            {
+                page: 1
+            },
+            function(response){
+                var lstData = response.Data;
+                vm.lstData = angular.copy(lstData);
+            }, function(error){
+                console.log('get deivce group', error);
+            });
         }
 
         function getDeviceGroup(){

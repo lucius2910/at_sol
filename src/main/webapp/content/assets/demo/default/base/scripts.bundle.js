@@ -8926,8 +8926,8 @@ var KTLayout = function() {
                 KTUtil.removeClass(body, 'kt-aside--minimizing');
             });
 
-            headerMenu.pauseDropdownHover(800);
-            asideMenu.pauseDropdownHover(800);
+            // headerMenu.pauseDropdownHover(800);
+            // asideMenu.pauseDropdownHover(800);
 
             // Remember state in cookie
             Cookies.set('kt_aside_toggle_state', toggle.getState());

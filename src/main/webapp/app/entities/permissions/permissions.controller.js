@@ -215,6 +215,7 @@
 
         $(function () {
             angular.element('#kt_form_status,#kt_form_type').selectpicker();
+            const ps = new PerfectScrollbar('#perfectScrollTable');
         });
         
     }

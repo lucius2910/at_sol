@@ -20767,7 +20767,8 @@ strong {
       .kt-datatable.kt-datatable--default > .kt-datatable__pager > .kt-datatable__pager-nav > li {
         padding: 0;
         margin-right: 5px;
-        display: inline-block; }
+        display: inline-block; 
+        max-height: 30px}
         .kt-datatable.kt-datatable--default > .kt-datatable__pager > .kt-datatable__pager-nav > li:last-child {
           margin-right: 0; }
         .kt-datatable.kt-datatable--default > .kt-datatable__pager > .kt-datatable__pager-nav > li > .kt-datatable__pager-link {

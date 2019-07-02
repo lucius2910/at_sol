@@ -5,9 +5,9 @@
         .module('atSolApp')
         .controller('RoleDeleteController', RoleDeleteController);
 
-    RoleDeleteController.$inject = ['$scope', '$uibModalInstance', 'dataItem'];
+    RoleDeleteController.$inject = ['$scope', '$uibModalInstance', 'dataItem', 'AtsAlertService'];
 
-    function RoleDeleteController ($scope, $uibModalInstance, dataItem) {
+    function RoleDeleteController ($scope, $uibModalInstance, dataItem, AtsAlertService) {
         var vm = this;
         
         vm.dataItem = dataItem;
@@ -16,6 +16,7 @@
         vm.deleteItem = deleteItem;
 
         function deleteItem(){
+            AtsAlertService.success('Role is deleted');
             $uibModalInstance.close();
         }
 

@@ -41,7 +41,7 @@
                                         <div class="kt-form__label">
                                             <label>Search:</label>
                                         </div>
-                                        <div class="kt-input-icon kt-input-icon--left">
+                                        <div class="kt-form__control kt-input-icon kt-input-icon--left">
                                             <input type="text" class="form-control" placeholder="Search..." id="generalSearch">
                                             <span class="kt-input-icon__icon kt-input-icon__icon--left">
                                                 <span><i class="la la-search"></i></span>
@@ -53,7 +53,7 @@
                                 <div class="col-md-3">
                                     <div class="kt-form__group">
                                         <div class="kt-form__control kt-form__control_btn">
-                                            <button type="button" class="btn btn-brand btn-icon-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <button type="button" class="btn btn-brand btn-icon-sm">
                                                 <i class="la la-search"></i> 
                                                 Search
                                             </button>
@@ -85,25 +85,22 @@
                                     </span>
                                 </th>
                                 <th data-field="OrderID" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Order ID</span>
+                                    <span style="width: 150px;">Role ID</span>
                                 </th>
                                 <th data-field="Country" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Country</span>
+                                    <span style="width: 150px;">Code</span>
                                 </th>
                                 <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Ship Date</span>
+                                    <span style="width: 150px;">Name</span>
                                 </th>
-                                <th data-field="CompanyName" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Company Name</span>
+                                <th data-field="ShipDate" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 150px;">Description</span>
                                 </th>
                                 <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Status</span>
+                                    <span style="width: 150px;">Status</span>
                                 </th>
-                                <th data-field="Type" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 182px;">Type</span>
-                                </th>
-                                <th data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell kt-datatable__cell--sort">
-                                    <span style="width: 110px;">Actions</span>
+                                <th data-field="Status" class="kt-datatable__cell kt-datatable__cell--sort">
+                                    <span style="width: 150px;">Action</span>
                                 </th>
                             </tr>
                         </thead>
@@ -118,30 +115,34 @@
                                         </label>
                                     </span>
                                 </td>
-                                <td data-field="OrderID" class="kt-datatable__cell"><span style="width: 182px;">{{item.id}}</span></td>
-                                <td data-field="Country" class="kt-datatable__cell"><span style="width: 182px;">{{item.country}}</span></td>
-                                <td data-field="ShipDate" class="kt-datatable__cell"><span style="width: 182px;">{{item.shipDate}}</span></td>
-                                <td data-field="CompanyName" class="kt-datatable__cell"><span style="width: 182px;">{{item.companyName}}</span></td>
-
-                                <td data-field="Status" class="kt-datatable__cell">
-                                    <span style="width: 182px;">
-                                        <span class="kt-badge  kt-badge--info kt-badge--inline kt-badge--pill">Info</span>
-                                    </span>
-                                </td>
+                                <td data-field="RoleID" class="kt-datatable__cell"><span style="width: 150px;">{{item.id}}</span></td>
+                                <td data-field="Code" class="kt-datatable__cell"><span style="width: 150px;">{{item.code}}</span></td>
+                                <td data-field="Name" class="kt-datatable__cell"><span style="width: 150px;">{{item.name}}</span></td>
+                                <td data-field="Description" class="kt-datatable__cell"><span style="width: 150px;">{{item.description}}</span></td>
 
                                 <td class="kt-datatable__cell--sorted kt-datatable__cell" data-field="Type" data-autohide-disabled="false">
-                                    <span style="width: 182px;">
+                                    <span style="width: 150px;" ng-if="item.status == '1'">
+                                        <span class="kt-badge kt-badge--success kt-badge--dot"></span>
+                                        &nbsp;
+                                        <span class="kt-font-success">Hoạt động</span>
+                                    </span>
+                                    <span style="width: 150px;" ng-if="item.status != '1'">
                                         <span class="kt-badge kt-badge--danger kt-badge--dot"></span>
-                                            &nbsp;
-                                        <span class="kt-font-bold kt-font-danger">Online</span>
+                                        &nbsp;
+                                        <span class="kt-font-danger">Không hoạt động</span>
                                     </span>
                                 </td>
 
                                 <td data-field="Actions" data-autohide-disabled="false" class="kt-datatable__cell">
-                                    <span style="overflow: visible; position: relative; width: 110px;">
+                                    <span style="overflow: visible; position: relative; width: 150px;">
                                         <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.editItem(item)">
                                             <i class="la la-edit"></i> 
                                         </button>
+
+                                        <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.configItem(item)">
+                                            <i class="la la-cogs"></i> 
+                                        </button>
+                                        
                                         <button type="button" class="btn btn-sm btn-clean btn-icon btn-icon-md" ng-click="vm.deleteItem(item)">
                                             <i class="la la-trash"></i>
                                         </button>
@@ -193,3 +194,4 @@
         </div>
     </div>
 </div>
+
